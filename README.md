@@ -1,11 +1,61 @@
-# email_intel
+<div align="center">
 
-A personal email intelligence service that watches your Outlook mailbox via
-Microsoft Graph, classifies conversations into operational buckets (Act /
-Respond / Delegate / WaitingOn / Defer / FYI / Noise), and keeps a matching
-Microsoft To Do task list in sync. See `project-plan.md` §1 for full scope.
+<img src="docs/banner.svg" alt="Obsidian SignalShard" width="900">
 
-## Prerequisites
+</div>
+
+<details>
+<summary>Plain-text banner (for terminals / <code>cat README.md</code>)</summary>
+
+```
+        ◆◆◆◆◆◆◆◆◆
+      ╱▓▓▓▓▓▓▓▓▓▓▓▓▓╲
+     ╱▓▓▒▒▒▒▒▒▒▒▒▓▓╲
+    ╱▓▓▒░░░░░░░░░▒▓▓╲         O B S I D I A N
+   ╱▓▓▒░░░░░░░░░░░▒▓▓╲
+   ╲▓▓▒░░░░░░░░░░░▒▓▓╱    ╔═╗╦╔═╗╔╗╔╔═╗╦  ╔═╗╦ ╦╔═╗╦═╗╔╦╗
+    ╲▓▓▒░░░░░░░░░▒▓▓╱     ╚═╗║║ ╦║║║╠═╣║  ╚═╗╠═╣╠═╣╠╦╝ ║║
+     ╲▓▓▒▒▒▒▒▒▒▒▒▓▓╱      ╚═╝╩╚═╝╝╚╝╩ ╩╩═╝╚═╝╩ ╩╩ ╩╩╚══╩╝
+      ╲▓▓▓▓▓▓▓▓▓▓▓▓▓╱
+        ◆◆◆◆◆◆◆◆◆      ── conversation state as the source of truth ──
+```
+
+</details>
+
+**Turn your inbox into a task system that maintains itself.**
+
+SignalShard watches your Outlook mailbox, understands what you owe, and keeps
+your task list in sync — automatically.
+
+No rules to maintain. No manual triage. No "I'll get to that later."
+
+Under the hood: a deterministic reducer + state machine that converts
+unstructured communication into actionable state. See `project-plan.md` §1
+for full scope.
+
+## What happens when you run this
+
+A concrete walkthrough of one conversation's lifecycle:
+
+1. **An email arrives** asking you to send over a signed document.
+   → SignalShard classifies it as **Act** and creates a task in your
+   Microsoft To Do list.
+2. **You reply** with the attachment.
+   → The reducer sees your outgoing message, transitions the conversation
+   to **WaitingOn**, and updates the task's category accordingly.
+3. **They confirm receipt.**
+   → State moves to **Done**; the task is completed for you.
+4. **A thank-you-only reply lands later.**
+   → Classified as **Noise**; no task churn, no notification.
+
+You never touched the task list. Conversation state *is* the task state.
+
+> **SignalShard runs fully deterministic in v1 — no LLM required.**
+> The classifier is rules + overrides + a gate. Replays are cheap,
+> behavior is auditable, and there is no model dependency to babysit.
+> See [Rules-only v1](#rules-only-v1) below.
+
+## Requirements
 
 - Python 3.11 or newer
 - A Microsoft 365 mailbox
@@ -137,6 +187,17 @@ async with acquire_conversation_lock(cid):
 PRAGMAs applied on every connection: `journal_mode=WAL`,
 `synchronous=NORMAL`, `foreign_keys=ON`, `busy_timeout=5000`.
 
+## Why this exists
+
+Inboxes are reactive systems. Tasks drift out of sync with the threads that
+spawned them. Humans are bad at tracking state across dozens of parallel
+conversations — "did I reply?", "am I waiting on them?", "is this still
+alive?" — and the cost of getting it wrong is quiet dropped balls.
+
+SignalShard treats the conversation itself as the source of truth for task
+state. The reducer derives what you owe from what was actually said, so your
+task list can't drift — because nothing is typed into it by hand.
+
 ## Where to go next
 
 - `project-plan.md` — full specification: data flows (§11), end-to-end
@@ -149,14 +210,7 @@ PRAGMAs applied on every connection: `journal_mode=WAL`,
 
 ## License
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
-
-Apache 2.0 gives you MIT-style permissiveness — use, modify, redistribute,
-and commercialize freely — plus an explicit patent grant from contributors.
-That patent clause is the reason to prefer it over MIT here: the reducer
-approach and state-machine design are novel enough that downstream users
-(and their legal teams) benefit from the patent protection, and it keeps
-the door open to a hosted/SaaS offering without a license change.
+Licensed under Apache 2.0. See [LICENSE](LICENSE) for details.
 
 ## Layout
 
