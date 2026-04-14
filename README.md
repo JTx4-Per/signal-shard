@@ -147,6 +147,17 @@ PRAGMAs applied on every connection: `journal_mode=WAL`,
 - `docs/architecture-decision-records/` — ADRs for SQLite, rules-only,
   pure reducer
 
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
+
+Apache 2.0 gives you MIT-style permissiveness — use, modify, redistribute,
+and commercialize freely — plus an explicit patent grant from contributors.
+That patent clause is the reason to prefer it over MIT here: the reducer
+approach and state-machine design are novel enough that downstream users
+(and their legal teams) benefit from the patent protection, and it keeps
+the door open to a hosted/SaaS offering without a license change.
+
 ## Layout
 
 ```
