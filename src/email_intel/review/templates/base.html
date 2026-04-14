@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{% block title %}Review Console{% endblock %} — Email Intelligence</title>
+<link rel="stylesheet" href="/review/static/review.css" />
+<script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+</head>
+<body>
+<header class="top">
+  <h1>Email Intelligence — Review Console</h1>
+  <p>Two review planes: <span class="tag state">state</span> (blocks writeback) ·
+     <span class="tag class">classification</span> (audit). <a href="/review/">home</a></p>
+</header>
+<main>
+{% block main %}{% endblock %}
+</main>
+</body>
+</html>

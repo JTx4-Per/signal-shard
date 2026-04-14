@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/reducer/evidence.py
+# hypothesis_version: 6.151.14
+
+[0.0, 0.75, 'automated', 'complete', 'confidence', 'confirm', 'defer_until', 'delete_candidate', 'detect_evidence', 'due_at', 'list-unsubscribe', 'newsletter', 'primary_bucket', 'reason_short', 'resolve', 'resolved', 'should_create_task', 'soft']

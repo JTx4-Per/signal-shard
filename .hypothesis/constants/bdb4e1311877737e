@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/graph/subscriptions.py
+# hypothesis_version: 6.151.14
+
+['%Y-%m-%dT%H:%M:%S.', ',', '/subscriptions', 'changeType', 'clientState', 'create_subscription', 'delete_subscription', 'expirationDateTime', 'list_subscriptions', 'notificationUrl', 'renew_subscription', 'resource']

@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/graph/auth.py
+# hypothesis_version: 6.151.14
+
+['DEFAULT_SCOPES', 'GraphAuth', 'GraphAuthError', 'Mail.ReadWrite', 'MailboxSettings.Read', 'Tasks.ReadWrite', 'access_token', 'user_code', 'utf-8']

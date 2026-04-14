@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/writeback/apply.py
+# hypothesis_version: 6.151.14
+
+['(no subject)', 'action', 'apply_reducer_result', 'category', 'check_and_store_key', 'dead_letter', 'error', 'events', 'failure_count', 'finalize_key_result', 'key', 'needs_review', 'noop', 'state_changed', 'task', 'utf-8']

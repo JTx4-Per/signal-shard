@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/scheduler.py
+# hypothesis_version: 6.151.14
+
+['FastAPI', 'UTC', 'app', 'conversations', 'dead_letter_health', 'defer_sweeper', 'delta_fallback_poll', 'folders', 'graph', 'interval', 'last_webhook_at', 'scheduler.delta_poll', 'session_factory', 'subscription_renewal']

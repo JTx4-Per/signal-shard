@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/schemas/reducer.py
+# hypothesis_version: 6.151.14
+
+['^T\\d{3}$', 'transition_id']

@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/writeback/tasks.py
+# hypothesis_version: 6.151.14
+
+['Act', 'Deferred', 'Delegate', 'EmailIntel', 'Respond', 'UTC', 'WaitingOn', 'action', 'apply_task_intent', 'body', 'body_markdown', 'completed', 'completion_kind', 'content', 'contentType', 'create', 'created', 'dateTime', 'dead_letter', 'dueDateTime', 'due_at', 'graph_task_id', 'id', 'idempotent', 'list_id', 'move_list', 'moved', 'noop', 'primary', 'reason', 'reopen', 'reopened', 'status', 'suppress', 'suppressed', 'task_id', 'text', 'timeZone', 'title', 'update_fields', 'updated']

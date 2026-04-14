@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/classify/pipeline.py
+# hypothesis_version: 6.151.14
+
+[b'\x00', b'\x01', b'\x02', b'\x03', 0.75, 1024, 'action_owner', 'automated', 'classify', 'classify.done', 'compute_input_hash', 'defer_until', 'delete_candidate', 'due_at', 'newsletter', 'no-rules-fired', 'rules-only-v1', 'utf-8', 'waiting_on']

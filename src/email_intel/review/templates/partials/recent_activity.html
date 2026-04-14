@@ -1,0 +1,22 @@
+{% if events %}
+<ul class="event-list">
+  {% for event, conv in events %}
+  <li>
+    <span class="ts mono">{{ event.occurred_at.isoformat() if event.occurred_at else "—" }}</span>
+    <span class="subject">
+      {% if conv %}
+        <a href="/review/conversations/{{ conv.id }}">{{ conv.canonical_subject or "(no subject)" }}</a>
+      {% else %}(orphan){% endif %}
+    </span>
+    <span class="event-type tag">{{ event.event_type.value }}</span>
+    <span class="transition mono">
+      {{ event.before_state.value if event.before_state else "—" }}
+      →
+      {{ event.after_state.value if event.after_state else "—" }}
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">No activity yet.</p>
+{% endif %}

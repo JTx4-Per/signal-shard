@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/config.py
+# hypothesis_version: 6.151.14
+
+['.env', 'INFO', 'clear', 'device', 'fyi', 'ignore', 'msal_app', 'none', 'preserve', 'static', 'utf-8', 'v1.0.0']

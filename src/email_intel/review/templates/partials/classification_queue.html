@@ -1,0 +1,41 @@
+{% if classification_items %}
+  {% for classification, conv in classification_items %}
+  <tr data-classification-id="{{ classification.id }}">
+    <td>
+      {% if conv %}
+        <a href="/review/conversations/{{ conv.id }}">{{ conv.canonical_subject or "(no subject)" }}</a>
+      {% else %}(orphan){% endif %}
+    </td>
+    <td class="bucket">{{ classification.primary_bucket.value if classification.primary_bucket else "—" }}</td>
+    <td class="mono">{{ "%.2f"|format(classification.confidence) if classification.confidence is not none else "—" }}</td>
+    <td class="reason">{{ classification.classification_review_reason or "—" }}</td>
+    <td>
+      <form hx-post="/review/classifications/{{ classification.id }}/resolve"
+            hx-target="closest tr"
+            hx-swap="outerHTML"
+            class="inline-form">
+        <input type="hidden" name="decision" value="accept" />
+        <button class="btn" type="submit">accept</button>
+      </form>
+      <form hx-post="/review/classifications/{{ classification.id }}/resolve"
+            hx-target="closest tr"
+            hx-swap="outerHTML"
+            class="inline-form">
+        <input type="hidden" name="decision" value="override" />
+        <select name="target_bucket">
+          <option value="Act">Act</option>
+          <option value="Respond">Respond</option>
+          <option value="Delegate">Delegate</option>
+          <option value="Defer">Defer</option>
+          <option value="WaitingOn">WaitingOn</option>
+          <option value="FYI">FYI</option>
+          <option value="DeleteOrUnsubscribe">DeleteOrUnsubscribe</option>
+        </select>
+        <button class="btn warn" type="submit">override</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+{% else %}
+  <tr class="empty"><td colspan="5">No classifications awaiting review.</td></tr>
+{% endif %}

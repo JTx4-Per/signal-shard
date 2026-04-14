@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/pipeline.py
+# hypothesis_version: 6.151.14
+
+['(no subject)', 'conversation_id', 'conversations', 'error', 'errors', 'folder_id', 'folder_not_found', 'folders', 'next_state', 'no_latest_message', 'removed', 'results', 'sentitems', 'skipped', 'transition_id', 'upserted', 'user_id', 'user_not_found']

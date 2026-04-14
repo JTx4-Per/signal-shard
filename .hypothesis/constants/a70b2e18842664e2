@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/reducer/guards.py
+# hypothesis_version: 6.151.14
+
+['GUARDS', 'Guard', 'completion_kind_hard', 'delegate_hint', 'has_active_task', 'original_ask_was_act', 'reopen_eligible_hard', 'review_disambiguated', 'sent_items_caught_up', 'soft_expired_window']

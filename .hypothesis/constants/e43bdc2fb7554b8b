@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/schemas/intents.py
+# hypothesis_version: 6.151.14
+
+['apply', 'classification', 'clear', 'create', 'dead_letter', 'hard_complete', 'move_list', 'none', 'noop', 'preserve', 'reopen', 'soft_complete', 'state', 'suppress', 'update_fields']

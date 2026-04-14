@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block main %}
+<section class="queue" id="state-queue-card">
+  <header>
+    <h2>State-level review queue
+      <small>{{ state_items|length }} blocking writeback</small>
+    </h2>
+  </header>
+  <table class="queue-table">
+    <thead>
+      <tr>
+        <th>Subject</th><th>Last sender</th><th>Last received</th>
+        <th>Reason</th><th></th>
+      </tr>
+    </thead>
+    <tbody id="state-queue-body">
+      {% include "partials/state_queue.html" %}
+    </tbody>
+  </table>
+</section>
+
+<section class="queue" id="classification-queue-card">
+  <header>
+    <h2>Classification-level review queue
+      <small>{{ classification_items|length }} pending</small>
+    </h2>
+  </header>
+  <table class="queue-table">
+    <thead>
+      <tr>
+        <th>Subject</th><th>Proposed bucket</th><th>Confidence</th>
+        <th>Reason</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="classification-queue-body">
+      {% include "partials/classification_queue.html" %}
+    </tbody>
+  </table>
+</section>
+
+<section class="queue" id="recent-activity-card">
+  <header>
+    <h2>Recent activity
+      <small>last {{ events|length }} events</small>
+    </h2>
+  </header>
+  <div id="recent-activity-body">
+    {% include "partials/recent_activity.html" %}
+  </div>
+</section>
+{% endblock %}

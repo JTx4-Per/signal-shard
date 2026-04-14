@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/ingestion/webhook.py
+# hypothesis_version: 6.151.14
+
+[200, 400, 401, '+00:00', '/graph', '/notifications', 'POST', 'Z', 'changeType', 'change_type', 'clientState', 'clientState mismatch', 'client_states', 'correlation_id', 'expirationDateTime', 'graph-notifications', 'invalid json', 'job_queue', 'resource', 'resourceData', 'resource_data', 'subscriptionId', 'subscription_id', 'text/plain', 'validationToken', 'value']

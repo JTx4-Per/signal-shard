@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Email Intelligence — Data & Logic State Machine (v2)</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --panel: #121a33;
+    --panel-2: #0f1630;
+    --ink: #e7ecff;
+    --muted: #8a97c2;
+    --line: #2a3664;
+    --act: #ff6b6b;
+    --respond: #4cc9f0;
+    --delegate: #b388ff;
+    --defer: #ffd166;
+    --waiting: #f4a261;
+    --fyi: #90be6d;
+    --noise: #6c757d;
+    --done: #2ec4b6;
+    --review: #ffb4e1;
+    --accent: #7cf0c9;
+    --sent: #ffdd7a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Inter, sans-serif; }
+  header.top { padding: 20px 28px; border-bottom: 1px solid var(--line); }
+  header.top h1 { margin: 0 0 4px; font-size: 20px; letter-spacing: .2px; }
+  header.top p { margin: 0; color: var(--muted); font-size: 13px; }
+  main { display: grid; grid-template-columns: 1fr; gap: 22px; padding: 22px; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  section > header { padding: 14px 20px; border-bottom: 1px solid var(--line); background: var(--panel-2); }
+  section h2 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+  section h2 small { color: var(--muted); font-weight: 400; margin-left: 8px; font-size: 12px; }
+  .svg-wrap { padding: 8px; overflow-x: auto; }
+  svg { display: block; width: 100%; height: auto; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 16px; padding: 10px 20px 16px;
+    color: var(--muted); font-size: 12px; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+    margin-right: 6px; vertical-align: -1px; }
+
+  .node rect, .node path { stroke: var(--line); stroke-width: 1.2; }
+  .node text { fill: var(--ink); font-size: 12px; font-family: inherit; }
+  .node .sub { fill: var(--muted); font-size: 10.5px; }
+  .edge { fill: none; stroke: #5366a0; stroke-width: 1.4; marker-end: url(#arrow); }
+  .edge.dash { stroke-dasharray: 5 4; stroke: #7889c4; }
+  .edge.back { stroke: #8392c4; stroke-dasharray: 2 4; }
+  .edge.strong { stroke: var(--accent); stroke-width: 2; marker-end: url(#arrowA); }
+  .edge-label { fill: var(--muted); font-size: 10.5px; font-family: inherit; }
+  .edge-label.k { fill: var(--accent); }
+
+  .swim { fill: #0d1430; stroke: var(--line); }
+  .swim-label { fill: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+
+  .b-act       { fill: #3a1a22; stroke: var(--act); }
+  .b-respond   { fill: #0f2a36; stroke: var(--respond); }
+  .b-delegate  { fill: #22163a; stroke: var(--delegate); }
+  .b-defer     { fill: #332a12; stroke: var(--defer); }
+  .b-waiting   { fill: #33220f; stroke: var(--waiting); }
+  .b-fyi       { fill: #16261a; stroke: var(--fyi); }
+  .b-noise     { fill: #1d2028; stroke: var(--noise); }
+  .b-done      { fill: #0f2a27; stroke: var(--done); }
+  .b-review    { fill: #2a1424; stroke: var(--review); }
+  .b-neutral   { fill: #172045; stroke: var(--line); }
+  .b-service   { fill: #14203f; stroke: #3a4a84; }
+  .b-data      { fill: #1a1630; stroke: #5a4a99; }
+  .b-graph     { fill: #102a22; stroke: var(--accent); }
+  .b-sent      { fill: #2a2510; stroke: var(--sent); }
+
+  .tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px; padding: 16px 20px 20px; }
+  .tbl { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .tbl h3 { margin: 0 0 8px; font-size: 13px; color: var(--accent); letter-spacing: .4px; }
+  .tbl ul { margin: 0; padding-left: 16px; color: var(--muted); font-size: 11.5px; line-height: 1.55; }
+  .tbl li code { color: var(--ink); font-size: 11.5px; }
+  .tbl.new { border-color: var(--accent); }
+  .tbl.new h3::after { content: " · new"; color: var(--muted); font-size: 10px; }
+
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 12px;
+           padding: 14px 20px 18px; }
+  .rule { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .rule h4 { margin: 0 0 6px; font-size: 12.5px; color: var(--accent); letter-spacing: .3px; }
+  .rule p { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.55; }
+  .rule code { color: var(--ink); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Email Intelligence — Data &amp; Logic State Machine (v2)</h1>
+  <p>Personal Email Intelligence System with Microsoft Graph + Microsoft To Do · derived from <code>project-plan.md</code> · updated with priority resolver, Sent-Items first-class trigger, needs_review, soft/hard completion, rule-override pass, and conversation_events.</p>
+</header>
+
+<main>
+
+<!-- ============================================================ -->
+<!-- 1. Pipeline                                                  -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>1 · Data Flow Pipeline <small>ingestion → classification → reducer → writeback — reducer owns truth</small></h2></header>
+  <div class="svg-wrap">
+  <svg viewBox="0 0 1320 620" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8090c8"/>
+      </marker>
+      <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#7cf0c9"/>
+      </marker>
+    </defs>
+
+    <!-- Swim lanes -->
+    <g>
+      <rect class="swim" x="10"   y="40" width="260" height="540" rx="10"/>
+      <rect class="swim" x="280"  y="40" width="240" height="540" rx="10"/>
+      <rect class="swim" x="530"  y="40" width="240" height="540" rx="10"/>
+      <rect class="swim" x="780"  y="40" width="260" height="540" rx="10"/>
+      <rect class="swim" x="1050" y="40" width="260" height="540" rx="10"/>
+      <text class="swim-label" x="140"  y="30" text-anchor="middle">Microsoft Graph</text>
+      <text class="swim-label" x="400"  y="30" text-anchor="middle">Ingestion + Normalize</text>
+      <text class="swim-label" x="650"  y="30" text-anchor="middle">Classification</text>
+      <text class="swim-label" x="910"  y="30" text-anchor="middle">Reducer (single brain)</text>
+      <text class="swim-label" x="1180" y="30" text-anchor="middle">Writeback</text>
+    </g>
+
+    <!-- Graph sources -->
+    <g class="node">
+      <rect class="b-graph" x="35" y="70" width="210" height="60" rx="8"/>
+      <text x="140" y="95" text-anchor="middle">Inbox + Archive</text>
+      <text x="140" y="112" class="sub" text-anchor="middle">inbound messages</text>
+
+      <!-- Sent Items emphasized -->
+      <rect class="b-sent" x="35" y="145" width="210" height="60" rx="8"/>
+      <text x="140" y="170" text-anchor="middle" style="fill:var(--sent)">Sent Items (first-class)</text>
+      <text x="140" y="187" class="sub" text-anchor="middle">drives respond → waiting_on</text>
+
+      <rect class="b-graph" x="35" y="220" width="210" height="55" rx="8"/>
+      <text x="140" y="243" text-anchor="middle">Change Notifications</text>
+      <text x="140" y="260" class="sub" text-anchor="middle">webhook subscriptions</text>
+
+      <rect class="b-graph" x="35" y="290" width="210" height="55" rx="8"/>
+      <text x="140" y="313" text-anchor="middle">Folder Delta Tokens</text>
+      <text x="140" y="330" class="sub" text-anchor="middle">incremental resync · fallback poll</text>
+
+      <rect class="b-graph" x="35" y="415" width="210" height="55" rx="8"/>
+      <text x="140" y="438" text-anchor="middle">Microsoft To Do</text>
+      <text x="140" y="455" class="sub" text-anchor="middle">lists · tasks · linkedResources</text>
+
+      <rect class="b-graph" x="35" y="485" width="210" height="55" rx="8"/>
+      <text x="140" y="508" text-anchor="middle">Categories / Extensions</text>
+      <text x="140" y="525" class="sub" text-anchor="middle">mailbox-visible state</text>
+    </g>
+
+    <!-- Ingestion lane -->
+    <g class="node">
+      <rect class="b-service" x="300" y="100" width="200" height="60" rx="8"/>
+      <text x="400" y="125" text-anchor="middle">Graph Ingestion</text>
+      <text x="400" y="142" class="sub" text-anchor="middle">delta · paging · retries · backoff</text>
+
+      <rect class="b-service" x="300" y="220" width="200" height="60" rx="8"/>
+      <text x="400" y="245" text-anchor="middle">Mail Normalizer</text>
+      <text x="400" y="262" class="sub" text-anchor="middle">canonical message record</text>
+
+      <rect class="b-service" x="300" y="340" width="200" height="60" rx="8"/>
+      <text x="400" y="365" text-anchor="middle">Thread Snapshot Builder</text>
+      <text x="400" y="382" class="sub" text-anchor="middle">features · user position · reply-state</text>
+
+      <rect class="b-data" x="300" y="460" width="200" height="90" rx="8"/>
+      <text x="400" y="486" text-anchor="middle">Persistence (Postgres)</text>
+      <text x="400" y="504" class="sub" text-anchor="middle">messages · conversations</text>
+      <text x="400" y="519" class="sub" text-anchor="middle">conversation_events (append)</text>
+      <text x="400" y="534" class="sub" text-anchor="middle">sync_events · audit_log</text>
+    </g>
+
+    <!-- Classification lane -->
+    <g class="node">
+      <rect class="b-service" x="550" y="100" width="200" height="55" rx="8"/>
+      <text x="650" y="123" text-anchor="middle">Stage A · Rules (hard)</text>
+      <text x="650" y="140" class="sub" text-anchor="middle">bulk · unsubscribe · direct-ask</text>
+
+      <rect class="b-service" x="550" y="175" width="200" height="55" rx="8"/>
+      <text x="650" y="198" text-anchor="middle">Stage B · Model</text>
+      <text x="650" y="215" class="sub" text-anchor="middle">bucket · conf · extraction JSON</text>
+
+      <rect class="b-service" x="550" y="250" width="200" height="55" rx="8"/>
+      <text x="650" y="273" text-anchor="middle">Rule Final Override</text>
+      <text x="650" y="290" class="sub" text-anchor="middle">noreply · VIP allow · domain block</text>
+
+      <rect class="b-neutral" x="550" y="325" width="200" height="55" rx="8"/>
+      <text x="650" y="348" text-anchor="middle">Confidence Gate</text>
+      <text x="650" y="365" class="sub" text-anchor="middle">write · confirm · review</text>
+
+      <rect class="b-data" x="550" y="405" width="200" height="70" rx="8"/>
+      <text x="650" y="430" text-anchor="middle">classifications</text>
+      <text x="650" y="448" class="sub" text-anchor="middle">bucket · conf · reason</text>
+      <text x="650" y="463" class="sub" text-anchor="middle">classifier_input_hash</text>
+    </g>
+
+    <!-- Reducer lane -->
+    <g class="node">
+      <rect class="b-service" x="800" y="100" width="220" height="55" rx="8"/>
+      <text x="910" y="123" text-anchor="middle">Priority Resolver</text>
+      <text x="910" y="140" class="sub" text-anchor="middle">resolution › new ask › user-last › defer › fyi</text>
+
+      <rect class="b-service" x="800" y="175" width="220" height="55" rx="8"/>
+      <text x="910" y="198" text-anchor="middle">Conversation Reducer</text>
+      <text x="910" y="215" class="sub" text-anchor="middle">state transitions (§13.3)</text>
+
+      <rect class="b-service" x="800" y="250" width="220" height="55" rx="8"/>
+      <text x="910" y="273" text-anchor="middle">Idempotency &amp; Dedupe</text>
+      <text x="910" y="290" class="sub" text-anchor="middle">op keys · conversation lock · one active task</text>
+
+      <rect class="b-review" x="800" y="325" width="220" height="55" rx="8"/>
+      <text x="910" y="348" text-anchor="middle" style="fill:var(--review)">State-level needs_review</text>
+      <text x="910" y="365" class="sub" text-anchor="middle">conflicting signals · unsafe transition</text>
+
+      <rect class="b-data" x="800" y="405" width="220" height="90" rx="8"/>
+      <text x="910" y="430" text-anchor="middle">conversations</text>
+      <text x="910" y="448" class="sub" text-anchor="middle">open_action_state · due_at</text>
+      <text x="910" y="463" class="sub" text-anchor="middle">open_action_task_id (only truth)</text>
+      <text x="910" y="478" class="sub" text-anchor="middle">waiting_on · deferred_until</text>
+    </g>
+
+    <!-- Writeback lane -->
+    <g class="node">
+      <rect class="b-service" x="1070" y="100" width="220" height="55" rx="8"/>
+      <text x="1180" y="123" text-anchor="middle">To Do Sync</text>
+      <text x="1180" y="140" class="sub" text-anchor="middle">create · update · soft/hard complete</text>
+
+      <rect class="b-service" x="1070" y="175" width="220" height="55" rx="8"/>
+      <text x="1180" y="198" text-anchor="middle">Mailbox Annotator</text>
+      <text x="1180" y="215" class="sub" text-anchor="middle">categories · extensions</text>
+
+      <rect class="b-service" x="1070" y="250" width="220" height="55" rx="8"/>
+      <text x="1180" y="273" text-anchor="middle">Review Console</text>
+      <text x="1180" y="290" class="sub" text-anchor="middle">overrides · dead-letter replay</text>
+
+      <rect class="b-data" x="1070" y="325" width="220" height="90" rx="8"/>
+      <text x="1180" y="352" text-anchor="middle">todo_tasks (two-way map)</text>
+      <text x="1180" y="370" class="sub" text-anchor="middle">conversation_id ↔ graph_todo_task_id</text>
+      <text x="1180" y="385" class="sub" text-anchor="middle">linked_resource_web_url</text>
+      <text x="1180" y="400" class="sub" text-anchor="middle">audit_log</text>
+
+      <rect class="b-service" x="1070" y="435" width="220" height="55" rx="8"/>
+      <text x="1180" y="458" text-anchor="middle">Graph Write Client</text>
+      <text x="1180" y="475" class="sub" text-anchor="middle">PATCH · POST · retry · rate-limit</text>
+    </g>
+
+    <!-- Flow edges (left-to-right) -->
+    <g>
+      <!-- Inbox + Sent -> Ingestion (both) -->
+      <path class="edge" d="M245,100 L300,120"/>
+      <path class="edge strong" d="M245,175 C270,175 285,140 300,135"/>
+      <text class="edge-label k" x="252" y="165">Sent Items trigger</text>
+
+      <!-- Change Notifications + Delta -> Ingestion (top of lane) -->
+      <path class="edge" d="M245,245 C265,245 280,160 300,145"/>
+      <path class="edge" d="M245,315 C270,315 280,160 300,150"/>
+
+      <!-- Ingestion -> Normalizer -> Snapshot -> Persistence -->
+      <path class="edge" d="M400,160 L400,220"/>
+      <path class="edge" d="M400,280 L400,340"/>
+      <path class="edge" d="M400,400 L400,460"/>
+
+      <!-- Snapshot -> Rules -->
+      <path class="edge" d="M500,360 C525,360 530,130 550,130"/>
+
+      <!-- Rules -> Model (ambiguous) -->
+      <path class="edge dash" d="M650,155 L650,175"/>
+      <text class="edge-label" x="658" y="170">model-needed</text>
+
+      <!-- Rules -> Override directly (high-conf rule) -->
+      <path class="edge" d="M550,130 C530,190 530,250 550,275"/>
+      <text class="edge-label" x="510" y="205">high-conf rule</text>
+
+      <!-- Model -> Override -->
+      <path class="edge" d="M650,230 L650,250"/>
+      <!-- Override -> Gate -->
+      <path class="edge" d="M650,305 L650,325"/>
+      <!-- Gate -> persist -->
+      <path class="edge" d="M650,380 L650,405"/>
+
+      <!-- Gate -> Priority Resolver -->
+      <path class="edge" d="M750,350 C775,350 780,130 800,128"/>
+      <text class="edge-label" x="755" y="240">classification event</text>
+
+      <!-- Resolver -> Reducer -> Idempotency -> Persist -->
+      <path class="edge" d="M910,155 L910,175"/>
+      <path class="edge" d="M910,230 L910,250"/>
+      <path class="edge" d="M910,305 L910,405"/>
+
+      <!-- Reducer -> needs_review (branch) -->
+      <path class="edge dash" d="M910,230 C880,295 870,315 850,335"/>
+      <text class="edge-label" x="770" y="310">conflict</text>
+
+      <!-- Idempotency -> Writeback trio -->
+      <path class="edge strong" d="M1020,275 C1045,275 1050,125 1070,125"/>
+      <path class="edge" d="M1020,278 C1045,278 1050,200 1070,200"/>
+      <path class="edge" d="M1020,282 C1045,282 1050,275 1070,275"/>
+
+      <!-- Writeback -> Persistence store -->
+      <path class="edge" d="M1180,305 L1180,325"/>
+      <!-- todo_tasks -> Graph Write Client -->
+      <path class="edge" d="M1180,415 L1180,435"/>
+
+      <!-- Graph Write Client -> Graph (To Do + Categories) -->
+      <path class="edge strong" d="M1070,462 C900,550 400,600 245,470"/>
+      <text class="edge-label k" x="560" y="588">Graph PATCH / POST · tasks · categories · extensions</text>
+      <path class="edge back" d="M1070,475 C900,565 400,580 245,535"/>
+
+      <!-- Review Console override -> Reducer (feedback) -->
+      <path class="edge back" d="M1070,278 C1050,400 980,400 960,340"/>
+      <text class="edge-label" x="985" y="395">manual override</text>
+    </g>
+  </svg>
+  </div>
+  <div class="legend">
+    <span><i style="background:#14203f;border:1px solid #3a4a84"></i>service</span>
+    <span><i style="background:#1a1630;border:1px solid #5a4a99"></i>persistence</span>
+    <span><i style="background:#102a22;border:1px solid var(--accent)"></i>Microsoft Graph</span>
+    <span><i style="background:#2a2510;border:1px solid var(--sent)"></i>Sent Items</span>
+    <span><i style="background:#2a1424;border:1px solid var(--review)"></i>needs_review</span>
+    <span><i style="background:transparent;border-top:2px dashed #7889c4;border-radius:0"></i>conditional</span>
+    <span><i style="background:transparent;border-top:2px solid var(--accent);border-radius:0"></i>critical path</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 2. Priority Resolver                                         -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>2 · Reducer Priority Resolver <small>deterministic signal ordering — prevents oscillation</small></h2></header>
+  <div class="svg-wrap">
+  <svg viewBox="0 0 1320 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8090c8"/>
+      </marker>
+      <style>.ep{fill:none;stroke:#5366a0;stroke-width:1.4;marker-end:url(#arrow-p);}</style>
+    </defs>
+    <g class="node">
+      <rect class="b-neutral" x="30" y="115" width="180" height="70" rx="10"/>
+      <text x="120" y="145" text-anchor="middle">Thread snapshot</text>
+      <text x="120" y="163" class="sub" text-anchor="middle">signals extracted</text>
+
+      <rect class="b-done" x="250" y="30" width="200" height="60" rx="10"/>
+      <text x="350" y="55" text-anchor="middle">① Resolution</text>
+      <text x="350" y="73" class="sub" text-anchor="middle">“thanks / done / closed”</text>
+
+      <rect class="b-act" x="250" y="100" width="200" height="60" rx="10"/>
+      <text x="350" y="125" text-anchor="middle">② New inbound ask</text>
+      <text x="350" y="143" class="sub" text-anchor="middle">question · deliverable</text>
+
+      <rect class="b-waiting" x="250" y="170" width="200" height="60" rx="10"/>
+      <text x="350" y="195" text-anchor="middle">③ User sent last</text>
+      <text x="350" y="213" class="sub" text-anchor="middle">Sent Items reply</text>
+
+      <rect class="b-defer" x="250" y="240" width="200" height="50" rx="10"/>
+      <text x="350" y="262" text-anchor="middle">④ Explicit defer</text>
+      <text x="350" y="278" class="sub" text-anchor="middle">“next week” · date</text>
+
+      <rect class="b-fyi" x="480" y="240" width="200" height="50" rx="10"/>
+      <text x="580" y="262" text-anchor="middle">⑤ FYI / noise</text>
+      <text x="580" y="278" class="sub" text-anchor="middle">lowest priority</text>
+
+      <!-- Resolution outputs -->
+      <rect class="b-done" x="500" y="30" width="180" height="60" rx="10"/>
+      <text x="590" y="55" text-anchor="middle">soft_complete</text>
+      <text x="590" y="73" class="sub" text-anchor="middle">model-inferred</text>
+
+      <rect class="b-done" x="700" y="30" width="180" height="60" rx="10"/>
+      <text x="790" y="55" text-anchor="middle">hard_complete</text>
+      <text x="790" y="73" class="sub" text-anchor="middle">explicit signal</text>
+
+      <!-- Ask -> transitions -->
+      <rect class="b-act" x="500" y="100" width="180" height="60" rx="10"/>
+      <text x="590" y="125" text-anchor="middle">act_open</text>
+      <text x="590" y="143" class="sub" text-anchor="middle">deliverable owed</text>
+      <rect class="b-respond" x="700" y="100" width="180" height="60" rx="10"/>
+      <text x="790" y="125" text-anchor="middle">respond_open</text>
+      <text x="790" y="143" class="sub" text-anchor="middle">reply owed</text>
+
+      <!-- User last -> waiting_on -->
+      <rect class="b-waiting" x="500" y="170" width="180" height="60" rx="10"/>
+      <text x="590" y="195" text-anchor="middle">waiting_on</text>
+      <text x="590" y="213" class="sub" text-anchor="middle">Sent satisfies ask</text>
+
+      <!-- Final commit -->
+      <rect class="b-service" x="920" y="115" width="200" height="70" rx="10"/>
+      <text x="1020" y="142" text-anchor="middle">Commit transition</text>
+      <text x="1020" y="160" class="sub" text-anchor="middle">first matching tier wins</text>
+      <text x="1020" y="175" class="sub" text-anchor="middle">others → suppressed signals</text>
+
+      <rect class="b-data" x="1150" y="115" width="150" height="70" rx="10"/>
+      <text x="1225" y="142" text-anchor="middle">conversations</text>
+      <text x="1225" y="160" class="sub" text-anchor="middle">open_action_state</text>
+      <text x="1225" y="175" class="sub" text-anchor="middle">+ conversation_events</text>
+    </g>
+    <g>
+      <path class="ep" d="M210,140 L250,60"/>
+      <path class="ep" d="M210,150 L250,130"/>
+      <path class="ep" d="M210,160 L250,200"/>
+      <path class="ep" d="M210,170 L250,265"/>
+      <path class="ep" d="M210,180 C330,230 460,260 480,265"/>
+
+      <path class="ep" d="M450,60 L500,60"/>
+      <path class="ep" d="M680,60 L700,60"/>
+      <path class="ep" d="M450,130 L500,130"/>
+      <path class="ep" d="M680,130 L700,130"/>
+      <path class="ep" d="M450,200 L500,200"/>
+
+      <path class="ep" d="M880,60 C905,60 910,110 920,125"/>
+      <path class="ep" d="M880,130 L920,140"/>
+      <path class="ep" d="M680,200 C760,200 870,170 920,155"/>
+      <path class="ep" d="M450,265 C700,265 880,200 920,170"/>
+      <path class="ep" d="M680,265 C800,265 880,200 920,175"/>
+
+      <path class="ep" d="M1120,150 L1150,150"/>
+    </g>
+  </svg>
+  </div>
+  <div class="rules">
+    <div class="rule"><h4>Why ordering matters</h4><p>A single inbound email can carry "thanks" + a new ask. Without a fixed tier, rules and model oscillate. Tier ① short-circuits tier ②, etc.</p></div>
+    <div class="rule"><h4>Soft vs hard complete</h4><p><code>soft_complete</code> (model-inferred) is reversible — a later message can reopen. <code>hard_complete</code> (explicit "done/closed/signed") is sticky and only reopens on a new ask, not on FYI follow-ups.</p></div>
+    <div class="rule"><h4>Sent Items is mandatory</h4><p>Tier ③ depends on Sent Items being synced in the same delta window. Without it, <code>respond_open → waiting_on</code> never fires and the Respond list grows unboundedly.</p></div>
+    <div class="rule"><h4>Bounded time window</h4><p>Reducer input is the snapshot <code>[conversation_start … latest_event_timestamp]</code>. Tier ③ requires <code>sent.ts ≤ latest_inbound.ts</code> — otherwise out-of-order delta pages could flip state incorrectly. "Now" is passed as a parameter, never read inside the reducer.</p></div>
+    <div class="rule"><h4>Determinism</h4><p>Same snapshot + same "now" → same transition. Required for event-log replay and regression tests.</p></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 3. Conversation State Machine                                -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>3 · Conversation State Machine <small>§13.3 + needs_review + split-noise + act→respond drift</small></h2></header>
+  <div class="svg-wrap">
+  <svg viewBox="0 0 1320 680" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8090c8"/>
+      </marker>
+      <style>.es{fill:none;stroke:#5366a0;stroke-width:1.4;marker-end:url(#arrow-s);}
+             .es.d{stroke-dasharray:5 4;stroke:#7889c4;}
+             .es.b{stroke:#8392c4;stroke-dasharray:2 4;}</style>
+    </defs>
+
+    <g class="node" font-weight="600">
+      <!-- Top-right non-actionable states -->
+      <rect class="b-noise" x="1090" y="40" width="200" height="60" rx="12"/>
+      <text x="1190" y="68" text-anchor="middle">noise_transient</text>
+      <text x="1190" y="86" class="sub" text-anchor="middle">newsletter · promo · bulk</text>
+
+      <rect class="b-fyi" x="1090" y="110" width="200" height="60" rx="12"/>
+      <text x="1190" y="138" text-anchor="middle">fyi_context</text>
+      <text x="1190" y="156" class="sub" text-anchor="middle">useful, no action</text>
+
+      <!-- Main flow -->
+      <rect class="b-neutral" x="40" y="300" width="150" height="80" rx="12"/>
+      <text x="115" y="330" text-anchor="middle">none</text>
+      <text x="115" y="350" class="sub" text-anchor="middle">no open obligation</text>
+      <text x="115" y="365" class="sub" text-anchor="middle">entry / idle</text>
+
+      <rect class="b-act" x="260" y="140" width="200" height="90" rx="12"/>
+      <text x="360" y="170" text-anchor="middle">act_open</text>
+      <text x="360" y="190" class="sub" text-anchor="middle">user owes deliverable</text>
+      <text x="360" y="206" class="sub" text-anchor="middle">list: Email – Act</text>
+
+      <rect class="b-respond" x="530" y="140" width="200" height="90" rx="12"/>
+      <text x="630" y="170" text-anchor="middle">respond_open</text>
+      <text x="630" y="190" class="sub" text-anchor="middle">user owes reply</text>
+      <text x="630" y="206" class="sub" text-anchor="middle">list: Email – Respond</text>
+
+      <rect class="b-waiting" x="800" y="300" width="200" height="90" rx="12"/>
+      <text x="900" y="330" text-anchor="middle">waiting_on</text>
+      <text x="900" y="350" class="sub" text-anchor="middle">blocked on counterparty</text>
+      <text x="900" y="366" class="sub" text-anchor="middle">list: Email – Waiting On</text>
+
+      <rect class="b-done" x="1090" y="300" width="200" height="90" rx="12"/>
+      <text x="1190" y="330" text-anchor="middle">done</text>
+      <text x="1190" y="350" class="sub" text-anchor="middle">soft | hard complete</text>
+      <text x="1190" y="366" class="sub" text-anchor="middle">AI-FYI or cleared</text>
+
+      <!-- Lower branches -->
+      <rect class="b-delegate" x="260" y="460" width="200" height="90" rx="12"/>
+      <text x="360" y="490" text-anchor="middle">delegate_open</text>
+      <text x="360" y="510" class="sub" text-anchor="middle">handoff candidate</text>
+      <text x="360" y="526" class="sub" text-anchor="middle">list: Email – Delegated</text>
+
+      <rect class="b-defer" x="530" y="460" width="200" height="90" rx="12"/>
+      <text x="630" y="490" text-anchor="middle">deferred</text>
+      <text x="630" y="510" class="sub" text-anchor="middle">actionable later</text>
+      <text x="630" y="526" class="sub" text-anchor="middle">defer_until armed</text>
+
+      <!-- needs_review (state-level) -->
+      <rect class="b-review" x="800" y="460" width="200" height="90" rx="12"/>
+      <text x="900" y="490" text-anchor="middle" style="fill:var(--review)">needs_review</text>
+      <text x="900" y="510" class="sub" text-anchor="middle">state-level ambiguity</text>
+      <text x="900" y="526" class="sub" text-anchor="middle">no writeback until resolved</text>
+    </g>
+
+    <!-- Transitions: none → open -->
+    <g>
+      <path class="es" d="M190,322 C225,230 245,180 260,175"/>
+      <text class="edge-label" x="200" y="240">inbound ask · work owed</text>
+      <path class="es" d="M190,340 C240,290 260,210 260,195"/>
+      <text class="edge-label" x="245" y="285">inbound ask · reply owed</text>
+      <path class="es" d="M190,360 C230,420 250,470 260,485"/>
+      <text class="edge-label" x="200" y="440">handoff intent</text>
+      <path class="es" d="M190,378 C320,440 460,480 530,495"/>
+      <text class="edge-label" x="330" y="440">future date only</text>
+
+      <!-- none → non-actionable (split) -->
+      <path class="es" d="M115,300 C115,160 800,40 1090,65"/>
+      <text class="edge-label" x="550" y="95">bulk / promo</text>
+      <path class="es" d="M115,300 C115,200 800,135 1090,140"/>
+      <text class="edge-label" x="550" y="180">FYI only</text>
+
+      <!-- act ↔ respond: canonical drift -->
+      <path class="es" d="M460,175 L530,175"/>
+      <text class="edge-label" x="468" y="168">scope shifts to reply</text>
+      <path class="es b" d="M530,195 L460,195"/>
+      <text class="edge-label" x="468" y="210">ask escalates to deliverable</text>
+
+      <!-- act/respond → waiting_on -->
+      <path class="es" d="M460,205 C620,260 770,300 800,320"/>
+      <text class="edge-label" x="520" y="260">user replied (Sent)</text>
+      <path class="es" d="M730,200 C770,240 785,300 800,320"/>
+      <text class="edge-label" x="735" y="260">reply satisfies ask</text>
+
+      <!-- delegate → waiting_on -->
+      <path class="es" d="M460,490 C660,440 780,370 800,345"/>
+      <text class="edge-label" x="560" y="420">handoff evidence: outbound forward / explicit new owner</text>
+
+      <!-- deferred → respond_open (date reached) -->
+      <path class="es" d="M560,460 C560,380 580,280 600,230"/>
+      <text class="edge-label" x="565" y="345">defer_until ≤ now</text>
+
+      <!-- waiting_on → respond_open (chase / new ask) -->
+      <path class="es b" d="M800,320 C770,260 750,220 730,210"/>
+      <text class="edge-label" x="735" y="275">counterparty new ask</text>
+
+      <!-- waiting_on → done -->
+      <path class="es" d="M1000,345 L1090,345"/>
+      <text class="edge-label" x="1010" y="336">hard_complete</text>
+      <path class="es d" d="M1000,360 L1090,360"/>
+      <text class="edge-label" x="1010" y="378">soft_complete (reversible)</text>
+
+      <!-- act/respond → done direct -->
+      <path class="es" d="M730,150 C950,150 1080,220 1120,300"/>
+      <text class="edge-label" x="870" y="140">resolved inline</text>
+
+      <!-- done → respond_open (reopen) via top channel at y=250 -->
+      <path class="es d" d="M1090,320 C1050,250 800,250 730,215"/>
+      <text class="edge-label" x="860" y="242">new ask reopens</text>
+
+      <!-- done → none via bottom gutter -->
+      <path class="es b" d="M1190,390 C1190,650 115,650 115,380"/>
+      <text class="edge-label" x="620" y="643">archive window elapsed</text>
+
+      <!-- any open → needs_review (state ambiguity) -->
+      <path class="es d" d="M360,230 C560,340 720,440 800,480"/>
+      <text class="edge-label" x="550" y="360">conflicting signals</text>
+      <path class="es d" d="M630,230 C720,320 780,440 800,490"/>
+      <path class="es d" d="M460,500 L800,500"/>
+      <path class="es d" d="M730,505 L800,505"/>
+
+      <!-- needs_review → resolved state (manual override) -->
+      <path class="es b" d="M800,475 C620,360 500,260 460,215"/>
+      <text class="edge-label" x="505" y="355">override → act</text>
+      <path class="es b" d="M800,480 C700,350 640,250 640,230"/>
+      <path class="es b" d="M1000,505 C1060,480 1080,400 1090,355"/>
+    </g>
+  </svg>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--act)"></i>act_open</span>
+    <span><i style="background:var(--respond)"></i>respond_open</span>
+    <span><i style="background:var(--delegate)"></i>delegate_open</span>
+    <span><i style="background:var(--defer)"></i>deferred</span>
+    <span><i style="background:var(--waiting)"></i>waiting_on</span>
+    <span><i style="background:var(--done)"></i>done (soft/hard)</span>
+    <span><i style="background:var(--review)"></i>needs_review</span>
+    <span><i style="background:var(--noise)"></i>noise_transient</span>
+    <span><i style="background:var(--fyi)"></i>fyi_context</span>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 4. Classification tree                                       -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>4 · Classification Decision Tree <small>rules (hard) → model → rules (final override) → gate → bucket</small></h2></header>
+  <div class="svg-wrap">
+  <svg viewBox="0 0 1320 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8090c8"/>
+      </marker>
+      <style>.ec{fill:none;stroke:#5366a0;stroke-width:1.4;marker-end:url(#arrow-c);}
+             .ec.d{stroke-dasharray:5 4;stroke:#7889c4;}</style>
+    </defs>
+    <g class="node">
+      <rect class="b-neutral" x="30" y="240" width="170" height="70" rx="10"/>
+      <text x="115" y="270" text-anchor="middle">Thread snapshot</text>
+      <text x="115" y="288" class="sub" text-anchor="middle">latest + history + features</text>
+
+      <path class="b-service" d="M240,250 L390,250 L420,280 L390,310 L240,310 L270,280 Z"/>
+      <text x="330" y="275" text-anchor="middle">Rules (hard)</text>
+      <text x="330" y="292" class="sub" text-anchor="middle">Stage A</text>
+
+      <path class="b-service" d="M460,250 L610,250 L640,280 L610,310 L460,310 L490,280 Z"/>
+      <text x="550" y="275" text-anchor="middle">Model</text>
+      <text x="550" y="292" class="sub" text-anchor="middle">Stage B · JSON contract</text>
+
+      <path class="b-service" d="M680,250 L830,250 L860,280 L830,310 L680,310 L710,280 Z"/>
+      <text x="770" y="275" text-anchor="middle">Rule Final Override</text>
+      <text x="770" y="292" class="sub" text-anchor="middle">noreply · VIP · domain block</text>
+
+      <path class="b-neutral" d="M900,250 L1030,250 L1060,280 L1030,310 L900,310 L930,280 Z"/>
+      <text x="980" y="275" text-anchor="middle">Confidence Gate</text>
+      <text x="980" y="292" class="sub" text-anchor="middle">write · confirm · review</text>
+
+      <rect class="b-review" x="900" y="400" width="170" height="70" rx="10"/>
+      <text x="985" y="428" text-anchor="middle" style="fill:var(--review)">review_queue</text>
+      <text x="985" y="446" class="sub" text-anchor="middle">classification-level</text>
+
+      <!-- Buckets column -->
+      <g font-weight="600">
+        <rect class="b-act"      x="1110" y="30"  width="180" height="42" rx="8"/>
+        <text x="1200" y="56" text-anchor="middle">Act</text>
+        <rect class="b-respond"  x="1110" y="80"  width="180" height="42" rx="8"/>
+        <text x="1200" y="106" text-anchor="middle">Respond</text>
+        <rect class="b-delegate" x="1110" y="130" width="180" height="42" rx="8"/>
+        <text x="1200" y="156" text-anchor="middle">Delegate</text>
+        <rect class="b-defer"    x="1110" y="180" width="180" height="42" rx="8"/>
+        <text x="1200" y="206" text-anchor="middle">Defer</text>
+        <rect class="b-waiting"  x="1110" y="230" width="180" height="42" rx="8"/>
+        <text x="1200" y="256" text-anchor="middle">WaitingOn</text>
+        <rect class="b-fyi"      x="1110" y="280" width="180" height="42" rx="8"/>
+        <text x="1200" y="306" text-anchor="middle">FYI (context)</text>
+        <rect class="b-noise"    x="1110" y="330" width="180" height="42" rx="8"/>
+        <text x="1200" y="356" text-anchor="middle">Noise (transient)</text>
+        <rect class="b-noise"    x="1110" y="380" width="180" height="42" rx="8"/>
+        <text x="1200" y="406" text-anchor="middle">Delete candidate</text>
+        <rect class="b-noise"    x="1110" y="430" width="180" height="42" rx="8"/>
+        <text x="1200" y="456" text-anchor="middle">Unsubscribe candidate</text>
+      </g>
+    </g>
+    <g>
+      <path class="ec" d="M200,275 L240,280"/>
+      <path class="ec d" d="M420,280 L460,280"/>
+      <text class="edge-label" x="425" y="272">ambiguous</text>
+      <path class="ec" d="M640,280 L680,280"/>
+      <text class="edge-label" x="642" y="272">model output</text>
+      <path class="ec" d="M860,280 L900,280"/>
+      <path class="ec d" d="M980,310 L985,400"/>
+      <text class="edge-label" x="990" y="358">low conf</text>
+      <!-- Rules high-conf direct to Override -->
+      <path class="ec" d="M420,280 C500,220 620,220 680,260"/>
+      <text class="edge-label" x="480" y="225">high-conf rule</text>
+
+      <!-- Gate -> buckets -->
+      <path class="ec" d="M1060,265 L1110,50"/>
+      <path class="ec" d="M1060,268 L1110,100"/>
+      <path class="ec" d="M1060,272 L1110,150"/>
+      <path class="ec" d="M1060,276 L1110,200"/>
+      <path class="ec" d="M1060,280 L1110,250"/>
+      <path class="ec" d="M1060,286 L1110,300"/>
+      <path class="ec" d="M1060,292 L1110,350"/>
+      <path class="ec" d="M1060,298 L1110,400"/>
+      <path class="ec" d="M1060,304 L1110,450"/>
+    </g>
+  </svg>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 5. Task lifecycle                                            -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>5 · Microsoft To Do Task Lifecycle <small>soft vs hard completion · armed/deferred · one-per-conversation</small></h2></header>
+  <div class="svg-wrap">
+  <svg viewBox="0 0 1320 440" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8090c8"/>
+      </marker>
+      <style>.et{fill:none;stroke:#5366a0;stroke-width:1.4;marker-end:url(#arrow-t);}
+             .et.d{stroke-dasharray:5 4;stroke:#7889c4;}
+             .et.b{stroke:#8392c4;stroke-dasharray:2 4;}</style>
+    </defs>
+    <g class="node">
+      <rect class="b-neutral" x="30" y="180" width="150" height="70" rx="10"/>
+      <text x="105" y="208" text-anchor="middle">no_task</text>
+      <text x="105" y="226" class="sub" text-anchor="middle">conversation idle</text>
+
+      <rect class="b-defer" x="30" y="310" width="150" height="70" rx="10"/>
+      <text x="105" y="338" text-anchor="middle">armed_deferred</text>
+      <text x="105" y="356" class="sub" text-anchor="middle">future due_at · no list yet</text>
+
+      <rect class="b-act" x="230" y="70" width="180" height="70" rx="10"/>
+      <text x="320" y="98" text-anchor="middle">active</text>
+      <text x="320" y="116" class="sub" text-anchor="middle">notStarted · inProgress</text>
+
+      <rect class="b-respond" x="230" y="280" width="180" height="70" rx="10"/>
+      <text x="320" y="308" text-anchor="middle">moved_list</text>
+      <text x="320" y="326" class="sub" text-anchor="middle">bucket changed · same task</text>
+
+      <rect class="b-waiting" x="470" y="180" width="180" height="70" rx="10"/>
+      <text x="560" y="208" text-anchor="middle">updated</text>
+      <text x="560" y="226" class="sub" text-anchor="middle">title · due · body</text>
+
+      <rect class="b-done" x="720" y="70" width="180" height="70" rx="10"/>
+      <text x="810" y="98" text-anchor="middle">soft_complete</text>
+      <text x="810" y="116" class="sub" text-anchor="middle">model-inferred · reversible</text>
+
+      <rect class="b-done" x="960" y="70" width="180" height="70" rx="10"/>
+      <text x="1050" y="98" text-anchor="middle">hard_complete</text>
+      <text x="1050" y="116" class="sub" text-anchor="middle">explicit signal · sticky</text>
+
+      <rect class="b-defer" x="720" y="280" width="180" height="70" rx="10"/>
+      <text x="810" y="308" text-anchor="middle">reopened</text>
+      <text x="810" y="326" class="sub" text-anchor="middle">new ask after complete</text>
+
+      <rect class="b-noise" x="960" y="280" width="180" height="70" rx="10"/>
+      <text x="1050" y="308" text-anchor="middle">suppressed</text>
+      <text x="1050" y="326" class="sub" text-anchor="middle">dedupe · FYI · noise</text>
+
+      <rect class="b-service" x="1160" y="180" width="140" height="80" rx="10"/>
+      <text x="1230" y="208" text-anchor="middle">dead_letter</text>
+      <text x="1230" y="226" class="sub" text-anchor="middle">repeated Graph</text>
+      <text x="1230" y="241" class="sub" text-anchor="middle">write failure</text>
+    </g>
+    <g>
+      <!-- no_task -> active / armed -->
+      <path class="et strong" d="M180,200 C205,140 220,105 230,105"/>
+      <text class="edge-label k" x="188" y="150">Act/Respond/WaitingOn · conf ≥ write</text>
+      <path class="et" d="M105,250 L105,310"/>
+      <text class="edge-label" x="110" y="285">Defer</text>
+      <path class="et" d="M180,340 C220,300 225,200 230,135"/>
+      <text class="edge-label" x="186" y="230">defer_until ≤ now</text>
+
+      <!-- active <-> moved_list -->
+      <path class="et d" d="M320,140 L320,280"/>
+      <text class="edge-label" x="325" y="215">bucket change</text>
+      <path class="et b" d="M340,280 L340,140"/>
+
+      <!-- active/moved -> updated -->
+      <path class="et" d="M410,105 C440,140 455,170 470,195"/>
+      <path class="et" d="M410,315 C440,270 455,240 470,225"/>
+
+      <!-- updated back to active (continues life) -->
+      <path class="et b" d="M470,195 C440,160 420,130 410,120"/>
+
+      <!-- updated -> soft_complete -->
+      <path class="et" d="M650,200 C690,160 710,120 720,110"/>
+      <text class="edge-label" x="655" y="160">resolution (soft)</text>
+      <!-- soft -> hard (promotion on explicit confirmation) -->
+      <path class="et" d="M900,105 L960,105"/>
+      <text class="edge-label" x="905" y="98">explicit confirm</text>
+      <!-- soft -> updated (reversal) -->
+      <path class="et b" d="M720,125 C690,160 660,190 650,210"/>
+      <text class="edge-label" x="650" y="157">later msg reverses</text>
+
+      <!-- updated -> hard_complete (direct) -->
+      <path class="et" d="M650,190 C820,140 920,100 960,100"/>
+      <text class="edge-label" x="800" y="150">explicit “done”</text>
+
+      <!-- hard -> reopened (new ask) -->
+      <path class="et d" d="M1050,140 C1050,220 910,260 900,285"/>
+      <text class="edge-label" x="950" y="225">new ask</text>
+      <!-- reopened -> updated -->
+      <path class="et" d="M720,310 C700,280 670,240 650,235"/>
+
+      <!-- suppressed (from no_task direct) -->
+      <path class="et d" d="M180,195 C400,20 800,20 1050,280"/>
+      <text class="edge-label" x="560" y="25">FYI · noise · dedupe hit</text>
+
+      <!-- dead_letter branch from updated -->
+      <path class="et b" d="M650,215 C900,215 1100,215 1160,220"/>
+      <text class="edge-label" x="940" y="208">unrecoverable write failure</text>
+    </g>
+  </svg>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 6. Data model                                                -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>6 · Core Data Model <small>tables · key relationships · reverse mapping · event log</small></h2></header>
+  <div class="tables">
+    <div class="tbl"><h3>users</h3><ul>
+      <li><code>id, graph_user_id, email</code></li></ul></div>
+    <div class="tbl"><h3>mail_folders</h3><ul>
+      <li><code>well_known_name</code> (Inbox / Sent / Archive)</li>
+      <li><code>delta_token, subscription_id, expires_at</code></li></ul></div>
+    <div class="tbl"><h3>messages</h3><ul>
+      <li><code>graph_message_id</code> unique</li>
+      <li><code>graph_conversation_id</code> indexed</li>
+      <li>recipients · body · etag</li></ul></div>
+    <div class="tbl"><h3>conversations</h3><ul>
+      <li><code>open_action_state</code> ← reducer (only truth)</li>
+      <li><code>open_action_task_id</code> ← reverse link</li>
+      <li><code>waiting_on_address, deferred_until, due_at</code></li>
+      <li><code>needs_review_reason</code> (nullable)</li></ul></div>
+    <div class="tbl"><h3>classifications</h3><ul>
+      <li><code>primary_bucket, confidence, reason_short</code></li>
+      <li><code>should_create_task, task_kind, task_title</code></li>
+      <li><code>classifier_input_hash</code> (idempotency key)</li></ul></div>
+    <div class="tbl"><h3>todo_lists</h3><ul>
+      <li>Email – Act / Respond / Waiting On / Delegated</li>
+      <li><code>graph_todo_list_id</code></li></ul></div>
+    <div class="tbl"><h3>todo_tasks</h3><ul>
+      <li><code>graph_todo_task_id</code> unique</li>
+      <li><code>conversation_id</code> unique-when-active</li>
+      <li><code>completion_kind</code> soft | hard</li>
+      <li><code>linked_resource_web_url</code></li></ul></div>
+    <div class="tbl new"><h3>conversation_events</h3><ul>
+      <li>append-only log per conversation</li>
+      <li><code>event_type</code>: message_added · classified · state_changed · task_created · task_updated · task_soft_complete · task_hard_complete · reopened · override</li>
+      <li><code>before_state, after_state, payload_json</code></li>
+      <li>enables replay · debugging · ML training</li></ul></div>
+    <div class="tbl new"><h3>operation_keys</h3><ul>
+      <li>dedupe/idempotency table</li>
+      <li><code>task_create_key = hash(conversation_id + task_kind)</code></li>
+      <li><code>classification_key = hash(message_id + model_version)</code></li>
+      <li><code>writeback_key = hash(conversation_id + intent + target_state)</code></li></ul></div>
+    <div class="tbl"><h3>sync_events</h3><ul>
+      <li>delta cursors · webhook receipts · retries</li></ul></div>
+    <div class="tbl"><h3>audit_log</h3><ul>
+      <li>every task / category / state change</li>
+      <li><code>before_json, after_json, source</code></li></ul></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. Invariants                                                -->
+<!-- ============================================================ -->
+<section>
+  <header><h2>7 · Hard Invariants <small>enforce in code, not just docs</small></h2></header>
+  <div class="rules">
+    <div class="rule"><h4>I1 · Reducer is sole task author</h4><p>Classification <em>never</em> writes tasks. Only the reducer, after priority resolution + idempotency check, emits writeback intents. Classifier outputs are evidence, not decisions.</p></div>
+    <div class="rule"><h4>I2 · One active task per conversation</h4><p><code>unique(conversation_id) where todo_tasks.status in (notStarted, inProgress)</code>. Dedupe key = <code>hash(conversation_id + task_kind)</code>. Two-way mapping stored both directions.</p></div>
+    <div class="rule"><h4>I3 · Sent Items must be in the snapshot</h4><p>Reducer refuses to transition <code>respond_open → waiting_on</code> unless the snapshot window includes Sent Items up to <code>latest_received_at</code>.</p></div>
+    <div class="rule"><h4>I4 · Priority tiers are total-ordered</h4><p>Resolution (①) short-circuits every lower tier. Ties within a tier fall through; tiers never merge. No "weighted score" blending.</p></div>
+    <div class="rule"><h4>I5 · Soft complete is reversible for N days</h4><p>A later inbound message within the soft window can revert to <code>updated</code>. Hard complete is sticky — only a <em>new ask</em> (tier ②) reopens it.</p></div>
+    <div class="rule"><h4>I6 · Every writeback is idempotent</h4><p>Writeback carries an <code>operation_key</code>. Second attempt with the same key is a no-op. Retries are safe; webhook storms cannot duplicate.</p></div>
+    <div class="rule"><h4>I7 · needs_review blocks writeback</h4><p>State-level <code>needs_review</code> suspends <em>all</em> Graph writes for the conversation until resolved (manual or by a later disambiguating message).</p></div>
+    <div class="rule"><h4>I8 · conversation_events is append-only</h4><p>State is derivable by replaying events. Destructive edits forbidden; corrections are compensating events.</p></div>
+    <div class="rule"><h4>I9 · Reducer is deterministic</h4><p>Same inputs → same transition, always. No wall-clock reads, no RNG, no non-idempotent side calls inside the reducer. "Now" is passed in as a parameter. Required for replay, debugging, and trust.</p></div>
+    <div class="rule"><h4>I10 · Reducer operates on a bounded time window</h4><p>Snapshot window = <code>[conversation_start … latest_event_timestamp]</code>. Transition <code>respond_open → waiting_on</code> requires <code>sent_items.timestamp ≤ latest_inbound.timestamp</code>. Out-of-order Graph deltas must not flip state; late messages replay through the reducer.</p></div>
+    <div class="rule"><h4>I11 · Handoff evidence is narrow</h4><p><code>delegate → waiting_on</code> requires <em>outbound</em> email with forward/assignment language <em>or</em> explicit mention of a new owner. Model hint alone is insufficient — prevents hallucinated delegations.</p></div>
+    <div class="rule"><h4>F1 · Future: multi-action threads (don't block structurally)</h4><p>v1 enforces one active task per conversation. Schema should already support multiple: prefer <code>todo_tasks.conversation_id</code> without a hard single-row constraint — use the "unique-when-active + action_slot" shape so v2 can decompose "send deck + confirm timeline" into 2 tasks without migration pain.</p></div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

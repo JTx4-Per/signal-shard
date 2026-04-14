@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/schemas/events.py
+# hypothesis_version: 6.151.14
+
+['Evidence', 'PriorityTier', 'bulk_noise', 'defer_timer_fired', 'due_date_update', 'explicit_defer', 'explicit_resolution', 'fyi_only', 'handoff_confirmed', 'manual_override', 'sent_items_lag', 'signal_conflict', 'soft_resolution', 'tier_for']

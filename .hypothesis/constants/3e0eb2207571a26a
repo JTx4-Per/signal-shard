@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/reducer/transitions.py
+# hypothesis_version: 6.151.14
+
+['POLICY', 'PRESERVE', 'T001', 'T002', 'T003', 'T004', 'T005', 'T006', 'T007', 'T008', 'T009', 'T010', 'T011', 'T012', 'T013', 'T014', 'T015', 'T016', 'T017', 'T020', 'T021', 'T022', 'T023', 'T024', 'T025', 'T026', 'T030', 'T031', 'T032', 'T033', 'T034', 'T035', 'T040', 'T041', 'T042', 'T043', 'T044', 'T045', 'T050', 'T051', 'T052', 'T053', 'T054', 'T055', 'T060', 'T061', 'T062', 'T063', 'T064', 'T065', 'T066', 'T070', 'T071', 'T072', 'T073', 'T080', 'T081', 'T082', 'T083', 'T084', 'T085', 'T090', 'T100', 'T101', 'T102', 'T103', 'T104', 'TRANSITIONS', 'TRANSITION_BY_ID', 'TransitionRow', 'completion_kind_hard', 'original_ask_was_act', 'policy', 'preserve', 'review_disambiguated', 'soft_expired_window']

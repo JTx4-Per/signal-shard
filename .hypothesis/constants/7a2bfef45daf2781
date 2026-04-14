@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/writeback/dead_letter.py
+# hypothesis_version: 6.151.14
+
+[500, 'conversation_id', 'error_message', 'error_type', 'flag_for_review', 'operation', 'reason', 'record_failure', 'source', 'writeback', 'writeback_failure']

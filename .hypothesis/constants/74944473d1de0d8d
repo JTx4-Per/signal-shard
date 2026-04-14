@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/ingestion/normalizer.py
+# hypothesis_version: 6.151.14
+
+[255, 100000, '+00:00', '@odata.etag', '@removed', 'AI-', 'Z', 'address', 'auto-submitted', 'body', 'bodyPreview', 'body_preview', 'body_text', 'br', 'categories', 'categories_json', 'ccRecipients', 'cc_recipients_json', 'changeKey', 'change_key', 'content', 'contentType', 'conversationId', 'div', 'emailAddress', 'etag', 'folder_id', 'from', 'from_address', 'from_name', 'graph_message_id', 'hasAttachments', 'has_attachments', 'html', 'id', 'importance', 'internetMessageId', 'internet_message_id', 'isRead', 'is_deleted', 'is_read', 'li', 'list-unsubscribe', 'name', 'p', 'parentFolderId', 'precedence', 'raw_headers_json', 'receivedDateTime', 'received_at', 'replyTo', 'reply_to_json', 'script', 'sender', 'sender_address', 'sentDateTime', 'sent_at', 'style', 'subject', 'toRecipients', 'to_recipients_json', 'tr', 'user_id', 'value', 'webLink', 'web_link']

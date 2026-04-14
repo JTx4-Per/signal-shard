@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/schemas/snapshot.py
+# hypothesis_version: 6.151.14
+
+['BCC', 'CC', 'NONE', 'TO']

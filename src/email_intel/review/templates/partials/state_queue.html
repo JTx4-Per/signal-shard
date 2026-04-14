@@ -1,0 +1,18 @@
+{% if state_items %}
+  {% for conv in state_items %}
+  <tr data-conv-id="{{ conv.id }}">
+    <td><a href="/review/conversations/{{ conv.id }}">{{ conv.canonical_subject or "(no subject)" }}</a></td>
+    <td class="mono">{{ conv.last_sender_address or "—" }}</td>
+    <td class="mono">{{ conv.latest_received_at.isoformat() if conv.latest_received_at else "—" }}</td>
+    <td class="reason">{{ conv.state_review_reason or "—" }}</td>
+    <td>
+      <button class="btn"
+              hx-post="/review/conversations/{{ conv.id }}/clear-review"
+              hx-target="closest tr"
+              hx-swap="outerHTML">clear</button>
+    </td>
+  </tr>
+  {% endfor %}
+{% else %}
+  <tr class="empty"><td colspan="5">No conversations are blocked on state review.</td></tr>
+{% endif %}

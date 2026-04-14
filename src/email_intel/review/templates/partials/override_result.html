@@ -1,0 +1,10 @@
+<div class="override-result ok" id="override-result">
+  <p class="msg">{{ message }}</p>
+  {% if payload %}
+  <pre class="payload mono">{{ payload|tojson }}</pre>
+  {% endif %}
+  <p class="mono">conversation #{{ conv.id }} — state_review_reason:
+    {{ conv.state_review_reason or "(cleared)" }}</p>
+  <p><a href="/review/conversations/{{ conv.id }}">Reload detail</a> ·
+     <a href="/review/">Back to dashboard</a></p>
+</div>

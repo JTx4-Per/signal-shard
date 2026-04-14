@@ -1,0 +1,26 @@
+{% if events %}
+<ul class="event-list">
+  {% for event in events %}
+  <li>
+    <span class="ts mono">{{ event.occurred_at.isoformat() if event.occurred_at else "—" }}</span>
+    <span class="event-type tag">{{ event.event_type.value }}</span>
+    <span class="transition mono">
+      {{ event.before_state.value if event.before_state else "—" }}
+      →
+      {{ event.after_state.value if event.after_state else "—" }}
+    </span>
+    <span class="actor">{{ event.actor.value }}</span>
+    {% if event.payload_json %}
+      <pre class="payload mono">{{ event.payload_json|tojson }}</pre>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% if next_offset is defined and next_offset %}
+<div hx-get="/review/conversations/{{ conversation_id }}/events?offset={{ next_offset }}"
+     hx-trigger="revealed"
+     hx-swap="outerHTML">loading more…</div>
+{% endif %}
+{% else %}
+<p class="empty">No events.</p>
+{% endif %}

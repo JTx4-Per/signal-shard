@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/classify/gate.py
+# hypothesis_version: 6.151.14
+
+[0.5, 0.75, 'apply_gate']

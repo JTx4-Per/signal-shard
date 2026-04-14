@@ -1,0 +1,14 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('3a2bc284-f11c-4676-a9e1-6310eea60f26')/todo/lists",
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET me/todo/lists?$select=displayName,isOwner",
+    "value": [
+        {
+            "@odata.etag": "W/\"1MMsE9Md1kSV33nxgvF8/wAAyyWTGA==\"",
+            "displayName": "Tasks",
+            "isOwner": true,
+            "isShared": false,
+            "wellknownListName": "defaultList",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAESAAA="
+        }
+    ]
+}

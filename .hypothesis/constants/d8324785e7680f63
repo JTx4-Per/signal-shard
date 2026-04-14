@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/db/base.py
+# hypothesis_version: 6.151.14
+
+['connect', 'sqlite']

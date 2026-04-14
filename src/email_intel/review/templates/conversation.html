@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Conversation {{ conv.id }}{% endblock %}
+{% block main %}
+<section class="queue" id="conv-summary">
+  <header>
+    <h2>{{ conv.canonical_subject or "(no subject)" }}
+      <small>conversation #{{ conv.id }}</small>
+    </h2>
+  </header>
+  <dl class="kv">
+    <dt>State</dt><dd class="tag state">{{ conv.open_action_state.value }}</dd>
+    <dt>Bucket</dt><dd>{{ conv.open_action_bucket.value if conv.open_action_bucket else "—" }}</dd>
+    <dt>Last sender</dt><dd class="mono">{{ conv.last_sender_address or "—" }}</dd>
+    <dt>Last received</dt><dd class="mono">{{ conv.latest_received_at.isoformat() if conv.latest_received_at else "—" }}</dd>
+    <dt>Task id</dt><dd class="mono">{{ conv.open_action_task_id or "—" }}</dd>
+    <dt>Due at</dt><dd class="mono">{{ conv.due_at.isoformat() if conv.due_at else "—" }}</dd>
+    <dt>Deferred until</dt><dd class="mono">{{ conv.deferred_until.isoformat() if conv.deferred_until else "—" }}</dd>
+    <dt>State review reason</dt><dd class="reason">{{ conv.state_review_reason or "—" }}</dd>
+  </dl>
+</section>
+
+<section class="queue" id="override-controls">
+  <header><h2>Override controls</h2></header>
+  <div id="override-result">
+    <form hx-post="/review/conversations/{{ conv.id }}/override"
+          hx-target="#override-result"
+          hx-swap="innerHTML"
+          class="stack-form">
+      <label>Target state
+        <select name="target_state" required>
+          {% for s in states %}<option value="{{ s }}" {% if s == conv.open_action_state.value %}selected{% endif %}>{{ s }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>Target bucket (optional)
+        <select name="target_bucket">
+          <option value="">—</option>
+          {% for b in buckets %}<option value="{{ b }}" {% if conv.open_action_bucket and b == conv.open_action_bucket.value %}selected{% endif %}>{{ b }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>Note
+        <textarea name="note" rows="2"></textarea>
+      </label>
+      <button class="btn warn" type="submit">Record override</button>
+      <button class="btn"
+              type="button"
+              hx-post="/review/conversations/{{ conv.id }}/clear-review"
+              hx-target="#override-result"
+              hx-swap="innerHTML">Clear state_review_reason</button>
+    </form>
+  </div>
+</section>
+
+<section class="queue" id="classifications">
+  <header><h2>Last classifications <small>up to 10</small></h2></header>
+  <table class="queue-table">
+    <thead><tr>
+      <th>When</th><th>Bucket</th><th>Confidence</th>
+      <th>Rule v</th><th>Model v</th><th>Reason</th><th>Review</th>
+    </tr></thead>
+    <tbody>
+    {% for c in classifications %}
+      <tr data-classification-id="{{ c.id }}">
+        <td class="mono">{{ c.created_at.isoformat() if c.created_at else "—" }}</td>
+        <td class="bucket">{{ c.primary_bucket.value if c.primary_bucket else "—" }}</td>
+        <td class="mono">{{ "%.2f"|format(c.confidence) if c.confidence is not none else "—" }}</td>
+        <td class="mono">{{ c.rule_version or "—" }}</td>
+        <td class="mono">{{ c.model_version or "—" }}</td>
+        <td class="reason">{{ c.reason_short or "—" }}</td>
+        <td class="tag class">{{ c.review_status.value }}</td>
+      </tr>
+    {% else %}
+      <tr class="empty"><td colspan="7">No classifications yet.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="queue" id="active-task">
+  <header><h2>Active todo task</h2></header>
+  {% if active_task %}
+  <dl class="kv">
+    <dt>Title</dt><dd>{{ active_task.title }}</dd>
+    <dt>Status</dt><dd>{{ active_task.status.value }}</dd>
+    <dt>Due</dt><dd class="mono">{{ active_task.due_at.isoformat() if active_task.due_at else "—" }}</dd>
+    <dt>Graph id</dt><dd class="mono">{{ active_task.graph_todo_task_id }}</dd>
+  </dl>
+  {% else %}
+  <p class="empty">No active task.</p>
+  {% endif %}
+</section>
+
+<section class="queue" id="timeline">
+  <header><h2>Event timeline <small>newest first</small></h2></header>
+  {% include "partials/timeline.html" %}
+</section>
+{% endblock %}

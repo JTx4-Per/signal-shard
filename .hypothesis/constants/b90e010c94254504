@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/review/routes.py
+# hypothesis_version: 6.151.14
+
+[100, 200, 404, 422, '/', '/review', '/static', 'Override recorded.', 'accept', 'active_task', 'buckets', 'classification', 'classification_id', 'classification_items', 'classifications', 'conv', 'conversation.html', 'conversation_id', 'dashboard.html', 'decision', 'events', 'inProgress', 'message', 'next_offset', 'notStarted', 'note', 'override', 'payload', 'review', 'review-static', 'review_ui', 'scope', 'source', 'state_items', 'states', 'static', 'target_bucket', 'target_state', 'templates']

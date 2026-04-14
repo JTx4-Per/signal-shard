@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/writeback/categories.py
+# hypothesis_version: 6.151.14
+
+['@odata.etag', 'AI-', 'AI-Act', 'AI-Deferred', 'AI-Delegate', 'AI-FYI', 'AI-Noise', 'AI-Respond', 'AI-Waiting', 'action', 'applied', 'categories', 'cleared', 'idempotent', 'message', 'message_id', 'needs_review', 'noop', 'reason', 'value', 'writeback.categories']

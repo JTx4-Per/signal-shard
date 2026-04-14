@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/reducer/reducer.py
+# hypothesis_version: 6.151.14
+
+['ReducerContractError', 'T000', 'T080', 'T081', 'T082', 'T083', 'T085', 'T090', 'T103', 'category_apply', 'clear', 'fyi', 'non_tier_modifiers', 'none', 'primary', 'prior_state', 'reason', 'reduce', 'reducer_transition', 'sent_items_lag', 'signal_conflict', 'soft_expired_window', 'suppressed_evidence', 'transition_id', 'winning_evidence']

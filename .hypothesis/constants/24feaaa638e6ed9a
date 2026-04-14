@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/graph/mail.py
+# hypothesis_version: 6.151.14
+
+[100, '$top', '/me/mailFolders', 'AI-', 'Archive', 'EtagMismatch', 'If-Match', 'Inbox', 'Sent Items', 'SentItems', 'categories', 'delta_messages', 'displayName', 'get_message', 'id', 'list_mail_folders', 'patch_categories']

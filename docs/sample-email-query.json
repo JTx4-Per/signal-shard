@@ -1,0 +1,560 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('3a2bc284-f11c-4676-a9e1-6310eea60f26')/messages",
+    "value": [
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AADCHmVb\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AADCZoNXAAA=",
+            "createdDateTime": "2026-04-01T21:15:49Z",
+            "lastModifiedDateTime": "2026-04-01T21:16:07Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AADCHmVb",
+            "categories": [],
+            "receivedDateTime": "2026-04-01T21:15:50Z",
+            "sentDateTime": "2026-04-01T21:15:44Z",
+            "hasAttachments": false,
+            "internetMessageId": "<3NEH6HNFWSU4.KNZQ2HM58WJG@cy4pepf0001a862>",
+            "subject": "Katherine Fu invited you to collaborate with Microsoft",
+            "bodyPreview": "  Only accept this invitation if you trust the sender and organization represented below. If you were not expecting this invitation, proceed with caution.\r\nSender:  Katherine Fu (katherinefu@microsoft.com)\r\nOrganization:  Microsoft\r\nDomain:  microsoft.onm",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAPUBruhSyOpLoaw_qaYCz-E=",
+            "conversationIndex": "AQHcwhy29QGu6FLI6kuhrD6ppgLP8Q==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAADCZoNXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><meta content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style type=\"text/css\">\r\n<!--\r\nbody, #bodyTable, #bodyCell\r\n\t{height:100%!important;\r\n\tmargin:0;\r\n\tpadding:0;\r\n\twidth:100%!important}\r\ndiv, span, h1, h2, h3, h4, h5, h6, p, b, u, i, center, table, tbody, tfoot, thead, tr, th, td\r\n\t{margin:0;\r\n\tpadding:0;\r\n\tborder:0;\r\n\tvertical-align:top;\r\n\tbox-sizing:border-box}\r\na, a:link, a:active, a:hover, a:visited, a:focus\r\n\t{text-decoration:underline}\r\nimg\r\n\t{display:block}\r\ntable\r\n\t{border-collapse:collapse}\r\nimg, a img\r\n\t{border:0;\r\n\toutline:none;\r\n\ttext-decoration:none}\r\nh1, h2, h3, h4, h5, h6\r\n\t{margin:0;\r\n\tpadding:0}\r\np\r\n\t{margin:1em 0}\r\n#outlook a\r\n\t{padding:0}\r\ntable\r\n\t{border-collapse:collapse!important}\r\nimg\r\n\t{border:0;\r\n\toutline:none;\r\n\ttext-decoration:none}\r\nbody, table, td, p, a, li, blockquote\r\n\t{}\r\ntable, td\r\n\t{}\r\nimg\r\n\t{}\r\n.auto-style1\r\n\t{font-size:10pt;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}\r\n.auto-style2\r\n\t{font-size:10pt;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}\r\n.auto-style3\r\n\t{text-align:right;\r\n\tborder:medium none #000000}\r\n.auto-style5\r\n\t{font-size:11pt;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\tcolor:#393939;\r\n\ttext-align:center;\r\n\tborder:medium none #000000}\r\n.auto-style6\r\n\t{font-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif,Tahoma,Geneva,Verdana,sans-serif;\r\n\tfont-size:21pt;\r\n\tcolor:#00B0F0;\r\n\ttext-align:center;\r\n\tborder:medium none #000000}\r\n.auto-style6V3\r\n\t{font-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif,Tahoma,Geneva,Verdana,sans-serif;\r\n\tfont-size:14px;\r\n\ttext-align:left;\r\n\tborder:medium none #000000;\r\n\tcolor:#323130}\r\n.auto-style6V4\r\n\t{font-family:\"Segoe UI Semibold\",Tahoma,Geneva,Verdana,sans-serif;\r\n\tfont-size:11pt;\r\n\ttext-align:right;\r\n\tborder:medium none #000000}\r\n.auto-style8\r\n\t{border:medium none #000000;\r\n\ttext-align:center;\r\n\tpadding-top:10px}\r\n.auto-style9\r\n\t{text-align:center;\r\n\tfont-family:\"Segoe UI Semibold\";\r\n\tfont-size:12pt;\r\n\tcolor:#FFFFFF;\r\n\tborder-style:none;\r\n\tborder-width:medium}\r\n.auto-style10\r\n\t{color:#FFFFFF}\r\n.auto-style11\r\n\t{font-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif,Tahoma,Geneva,Verdana,sans-serif;\r\n\tfont-size:11pt;\r\n\tborder-right-style:none;\r\n\tborder-right-width:medium;\r\n\tborder-top-style:none;\r\n\tborder-top-width:medium;\r\n\tborder-bottom-style:none;\r\n\tborder-bottom-width:medium}\r\n.auto-style12\r\n\t{font-size:14px;\r\n\tcolor:#323130;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\ttext-align:center;\r\n\tborder:medium none #000000}\r\n.auto-style12V3\r\n\t{font-size:13px;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\ttext-align:left;\r\n\tborder:medium none #000000}\r\n.auto-style12V3 .redText, .auto-style40 .auto-style8\r\n\t{color:#990000;\r\n\tfont-family:\"Segoe UI Semibold\"}\r\n.auto-style13\r\n\t{font-size:x-small;\r\n\tfont-family:\"Segoe UI Semibold\";\r\n\ttext-align:center}\r\n.auto-style14\r\n\t{border:medium none #000000;\r\n\tfont-size:14px;\r\n\ttext-align:center;\r\n\tcolor:#323130}\r\n.auto-style14V3\r\n\t{border:medium none #000000;\r\n\tfont-size:14px;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\ttext-align:left;\r\n\tcolor:#323130}\r\n.font-md\r\n\t{font-size:16px;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}\r\n.auto-style16\r\n\t{border-width:0px}\r\n.auto-style19\r\n\t{font-family:\"Segoe UI Semibold\";\r\n\tfont-size:x-small}\r\n.auto-style21\r\n\t{text-align:right;\r\n\tborder-left:0 solid #000000;\r\n\tborder-right:0 solid #000000;\r\n\tborder-top:0 solid #000000;\r\n\tborder-bottom:medium none #000000}\r\n.auto-style22\r\n\t{border:medium none \r\n#000000}\r\n.auto-style31\r\n\t{border-left-style:none;\r\n\tborder-left-width:medium;\r\n\tborder-top-style:none;\r\n\tborder-top-width:medium;\r\n\tborder-bottom-style:none;\r\n\tborder-bottom-width:medium}\r\n.auto-style32\r\n\t{border-left-style:none;\r\n\tborder-left-width:medium;\r\n\tborder-right-style:none;\r\n\tborder-right-width:medium;\r\n\tborder-top-style:none;\r\n\tborder-top-width:medium}\r\n.auto-style39\r\n\t{border-top-style:none;\r\n\tborder-top-width:medium}\r\n.auto-style40\r\n\t{border-color:#000000;\r\n\tborder-width:0px}\r\n.auto-style41\r\n\t{text-align:center;\r\n\tborder:medium none #000000}\r\n.auto-style42\r\n\t{border-left-color:#393939;\r\n\tborder-left-width:0;\r\n\tborder-right-color:#393939;\r\n\tborder-right-width:0;\r\n\tborder-top-color:#393939;\r\n\tborder-top-width:0px;\r\n\tborder-bottom-color:#393939;\r\n\tborder-bottom-width:0px}\r\n.auto-style43\r\n\t{text-align:right;\r\n\tborder-style:none;\r\n\tborder-width:medium}\r\n.auto-style44\r\n\t{border-right-style:none;\r\n\tborder-right-width:medium}\r\n.auto-style45\r\n\t{border-left-style:none;\r\n\tborder-left-width:medium}\r\n.auto-style46\r\n\t{text-align:left;\r\n\tborder-style:none;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\tfont-size:20pt;\r\n\tborder:medium none #000000}\r\n.auto-style47\r\n\t{text-align:left;\r\n\tfont-family:\"Segoe UI Semibold\";\r\n\tfont-size:x-small;\r\n\tborder:medium none #000000}\r\n.auto-style48\r\n\t{text-align:left;\r\n\tfont-family:\"Segoe UI Semibold\";\r\n\tfont-size:x-large;\r\n\tborder:medium none #000000;\r\n\tcolor:#FFFFFF}\r\n.auto-style49\r\n\t{border-bottom-style:none;\r\n\tborder-bottom-width:medium}\r\n.auto-style50\r\n\t{border:0 solid #B7B7B7}\r\n.auto-style52\r\n\t{line-height:normal;\r\n\ttext-indent:0in;\r\n\ttext-align:left;\r\n\tdirection:ltr;\r\n\tfont-family:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\tfont-variant:normal;\r\n\tcolor:#FFFFFF;\r\n\ttext-transform:none;\r\n\tletter-spacing:0pt;\r\n\tfont-weight:normal;\r\n\tfont-style:normal;\r\n\tvertical-align:middle;\r\n\tfont-size:10px;\r\n\tmargin:0pt 0in}\r\n.square\r\n\t{height:15px;\r\n\twidth:15px;\r\n\tbackground-color:#990000}\r\n.auto-style42 tr .auto-style43 .anchor-same-color a\r\n\t{color:#FFFFFF;\r\n\ttext-decoration:underline}\r\n.key-value-text-align\r\n\t{display:inline-block;\r\n\ttext-align:left}\r\n.large-double-quotes\r\n\t{font-family:Times New Roman;\r\n\tfont-size:70pt;\r\n\tcolor:#8A8A8A}\r\n.text-message\r\n\t{border:medium none #000000;\r\n\tfont-size:14px;\r\n\tfont-family:\"Segoe UI Web (West European)\",\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\tpadding-top:30px;\r\n\tcolor:#323130}\r\n.semibold\r\n\t{font-family:\"Segoe UI Semibold\",\"Segoe UI Web (West European)\",\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;\r\n\tfont-weight:600}\r\n.left-quotes\r\n\t{text-align:right;\r\n\tborder:medium none #000000;\r\n\tpadding-left:30px;\r\n\tpadding-right:10px}\r\n.right-quotes\r\n\t{text-align:left;\r\n\tborder:medium none #000000;\r\n\tpadding-top:35px;\r\n\tpadding-right:30px;\r\n\tpadding-left:10px}\r\n.img-float img\r\n\t{float:left}\r\n.sender-info\r\n\t{font-family:'Segoe UI',inherit}\r\n.accept-button\r\n\t{text-align:center;\r\n\tfont-size:18px;\r\n\tcolor:#015CDA;\r\n\tpadding-top:8px;\r\n\tpadding-right:20px;\r\n\tpadding-bottom:10px;\r\n\tpadding-left:20px;\r\n\tborder:2px solid #015CDA}\r\n.url-disabled\r\n\t{}\r\n.quote-message\r\n\t{margin:0;\r\n\tpadding:0;\r\n\tborder:0;\r\n\tvertical-align:top;\r\n\ttext-align:left}\r\n@media only screen and (max-device-width: 812px) and (orientation: portrait) {\r\n.text-message, .auto-style6V3, .auto-style12, .auto-style14, .auto-style14V3, .sender-info, .auto-style8\r\n\t{font-size:24px}\r\n.auto-style12V3\r\n\t{font-size:22px}\r\n.accept-button\r\n\t{font-size:30px}\r\n.auto-style52\r\n\t{font-size:17px}\r\n\r\n\t}\r\n-->\r\n</style></head><body><table align=\"center\" bgcolor=\"#FFFFFF\" cellpadding=\"0\" cellspacing=\"1\" class=\"auto-style16\" role=\"presentation\" style=\"width:700px\"><tbody><tr><td class=\"auto-style14V3\"><div class=\"image-float key-value-text-align\" style=\"display:inline-block\"><img src=\"https://invitations.microsoft.com/Content/Images/PixelWarning.png\" border=\"0\" alt=\"Warning Icon\" style=\"max-height:12px; max-width:12px; display:inline-block\"> &nbsp; Only accept this invitation if you trust the sender and organization represented below. <span class=\"semibold\">If you were not expecting this invitation, proceed with caution.</span> </div></td></tr><tr><td class=\"auto-style14\" align=\"center\" style=\"height:10px; padding-top:20px; margin-left:auto; margin-right:auto\"><table class=\"key-value-text-align\" role=\"presentation\"><tbody><tr><td class=\"sender-info\"><span class=\"semibold\">Sender:&nbsp;</span> Katherine Fu (<a href=\"mailto:katherinefu@microsoft.com\">katherinefu@microsoft.com</a>) <br><span class=\"semibold\">Organization:&nbsp;</span> Microsoft <br><span class=\"semibold\">Domain:&nbsp;</span> <a href=\"microsoft.onmicrosoft.com\" aria-label=\"microsoft.onmicrosoft.com\">microsoft.onmicrosoft.com</a> </td></tr></tbody></table></td></tr><tr aria-hidden=\"true\"><td class=\"auto-style22\" colspan=\"6\">&nbsp;</td></tr></tbody></table><table class=\"auto-style40\" bgcolor=\"#FFFFFF\" width=\"700\" align=\"center\" role=\"presentation\"><tbody><tr aria-hidden=\"true\"><td class=\"auto-style22\" colspan=\"6\">&nbsp;</td></tr><tr aria-hidden=\"true\"><td class=\"auto-style22\" colspan=\"6\">&nbsp;</td></tr><tr></tr><tr><td align=\"center\" class=\"auto-style12\" colspan=\"6\" style=\"height:10px\">If you accept this invitation, you’ll be sent to <a href=\"https://myapps.microsoft.com/?tid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;login_hint=AdeleV@M365x63639251.OnMicrosoft.com\">https://myapps.microsoft.com/?tid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;login_hint=AdeleV@M365x63639251.OnMicrosoft.com</a>. </td></tr><tr aria-hidden=\"true\"><td class=\"auto-style22\" colspan=\"6\" style=\"height:10px\">&nbsp;</td></tr><tr><td colspan=\"6\" align=\"center\" style=\"padding-top:5px; padding-bottom:5px; text-align:center\"><a href=\"https://login.microsoftonline.com/redeem?rd=https%3a%2f%2finvitations.microsoft.com%2fredeem%2f%3ftenant%3d72f988bf-86f1-41af-91ab-2d7cd011db47%26user%3d89092868-6db1-4e58-b02e-7e2fad37bb3a%26ticket%3dicR0OSsdZ7V%25252bI0zEsxPBGgQx%25252beza%25252b8On4iPVd%25252fKKSHc%25253d%26ver%3d2.0\" target=\"_blank\" class=\"accept-button semibold\">Accept invitation </a></td></tr><tr><td colspan=\"6\" class=\"font-md\" align=\"center\" style=\"padding-top:5px; padding-bottom:5px; text-align:center\">Securely sign in to join Microsoft </td></tr><tr aria-hidden=\"true\"><td colspan=\"6\" class=\"auto-style22\">&nbsp;</td></tr><tr aria-hidden=\"true\"><td colspan=\"6\" class=\"auto-style22\">&nbsp;</td></tr></tbody></table><table align=\"center\" bgcolor=\"#f2f2f2\" cellpadding=\"0\" cellspacing=\"1\" class=\"auto-style42\" width=\"700\" role=\"presentation\"><tbody><tr><td class=\"auto-style12V3\" style=\"height:10px; padding-top:15px; padding-left:25px; padding-right:25px; word-break:normal\"><div>This invitation email is from Microsoft (<a href=\"microsoft.onmicrosoft.com\">microsoft.onmicrosoft.com</a>) and may include advertising content.&nbsp; <a href=\"https://privacy.microsoft.com/en-us/data-privacy-notice\">Read Microsoft's privacy statement</a>. </div></td></tr><tr><td class=\"auto-style12V3\" style=\"height:10px; padding-top:15px; padding-left:25px; padding-right:25px; word-break:normal\"><div class=\"redText\">Microsoft Corporation facilitated sending this email but did not validate the sender or the message. </div></td></tr><tr><td height=\"20px\">&nbsp;</td></tr></tbody></table><table align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"auto-style42\" role=\"presentation\" style=\"width:700px\"><tbody><tr bgcolor=\"#575352\"><td aria-hidden=\"true\" height=\"30px\" bgcolor=\"#575352\" class=\"auto-style44\" style=\"width:25px; height:30px\">&nbsp; </td><td height=\"30px\" bgcolor=\"#575352\" class=\"auto-style43\" style=\"text-align:center; vertical-align:middle; padding-top:6px; padding-bottom:7px\"><div class=\"auto-style52 anchor-same-color\" style=\"float:left; unicode-bidi:embed; word-break:normal\"><span id=\"privacyURL\" dir=\"ltr\">Microsoft respects your privacy. To learn more, please read the <a href=\"http://go.microsoft.com/fwlink/?LinkId=521839\">Microsoft Privacy Statement</a>. </span><br>Microsoft Corporation, One Microsoft Way, Redmond, WA 98052 </div></td><td height=\"30px\" bgcolor=\"#575352\" class=\"auto-style43\" style=\"text-align:right; vertical-align:middle; padding-top:3px\"><img alt=\"Microsoft Logo\" src=\"https://invitations.microsoft.com/Content/Images/microsoftlogo.png\" width=\"69\" style=\"display:inline-block\"> </td><td aria-hidden=\"true\" height=\"30px\" bgcolor=\"#575352\" class=\"auto-style45\" style=\"width:25px\">&nbsp; </td></tr></tbody></table></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Microsoft Invitations on behalf of Microsoft",
+                    "address": "invites@microsoft.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Microsoft Invitations on behalf of Microsoft",
+                    "address": "invites@microsoft.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [
+                {
+                    "emailAddress": {
+                        "name": "katherinefu@microsoft.com",
+                        "address": "katherinefu@microsoft.com"
+                    }
+                }
+            ],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AAC2ZtVs\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AAC2rAA2AAA=",
+            "createdDateTime": "2026-03-10T13:22:01Z",
+            "lastModifiedDateTime": "2026-03-10T13:22:13Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AAC2ZtVs",
+            "categories": [],
+            "receivedDateTime": "2026-03-10T13:22:03Z",
+            "sentDateTime": "2026-03-10T13:21:57Z",
+            "hasAttachments": true,
+            "internetMessageId": "<XKDSCQGLPSU4.T5X94KZQXRFZ1@ic3-calling-echo-botcentral-deployment-6f8bbf8d8-lnmtx>",
+            "subject": "Voice Mail (3 seconds)",
+            "bodyPreview": "You received a voice mail from Dev Tester1 at devtester1@realwear.com.\r\n\r\nEmail:  devtester1@realwear.com\r\n\r\n\r\nSet Up Voice Mail",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAMnD58m7nx5Bllz6MEHoAD4=",
+            "conversationIndex": "AQHcsJDhycPnybufHkGWXPowQegAPg==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAAC2rAA2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><style type=\"text/css\">\r\n<!--\r\na:link\r\n\t{color:#0563C1}\r\na:visited\r\n\t{color:#954F72}\r\na:active\r\n\t{color:#954F72}\r\n-->\r\n</style></head><body><style type=\"text/css\">\r\n<!--\r\na:link\r\n\t{color:#0563C1}\r\na:visited\r\n\t{color:#954F72}\r\na:active\r\n\t{color:#954F72}\r\n-->\r\n</style><div style=\"font-family:'Segoe UI',Arial,sans-serif; background-color:#ffffff; color:#16233A; font-size:10.5pt\"><div id=\"UM-call-info\" lang=\"en\"><div style=\"font-family:'Segoe UI',Arial,sans-serif; font-size:9pt; color:#595959\">You received a voice mail from Dev Tester1 at <a href=\"sip:devtester1@realwear.com\" style=\"color:#0070C0\">devtester1@realwear.com</a>.</div><br><table border=\"0\" style=\"width:100%; table-layout:auto\"><tbody><tr><td width=\"15%\" nowrap=\"\" style=\"font-family:'Segoe UI',Arial,sans-serif; color:#595959; font-size:9pt; border-width:0in\">Email:</td><td width=\"85%\" style=\"font-family:'Segoe UI',Arial,sans-serif; color:#000000; border-width:0in; font-size:9pt; vertical-align:top; padding-left:10px; padding-right:10px\"><a href=\"mailto:devtester1@realwear.com\" style=\"color:#3366CC\">devtester1@realwear.com</a></td></tr></tbody></table><br><br></div><div lang=\"en\" dir=\"ltr\" style=\"font-family:'Segoe UI',Arial,sans-serif; font-size:9pt; color:#595959\"><a href=\"https://aka.ms/vmsettings\" style=\"font-size:9pt; color:#0070C0\">Set Up Voice Mail</a></div></div></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Dev Tester1 (External)",
+                    "address": "devtester1@realwear.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Dev Tester1 (External)",
+                    "address": "devtester1@realwear.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [
+                {
+                    "emailAddress": {
+                        "name": "Dev Tester1 (External)",
+                        "address": "devtester1@realwear.com"
+                    }
+                }
+            ],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACrSQER\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AACrjVV0AAA=",
+            "createdDateTime": "2026-03-01T04:29:33Z",
+            "lastModifiedDateTime": "2026-03-01T04:29:35Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACrSQER",
+            "categories": [],
+            "receivedDateTime": "2026-03-01T04:29:33Z",
+            "sentDateTime": "2026-03-01T04:29:27Z",
+            "hasAttachments": false,
+            "internetMessageId": "<AS2PR02MB10225DF4F122832516D3A50F9F671A@AS2PR02MB10225.eurprd02.prod.outlook.com>",
+            "subject": "Hi Adele, where did you find my account and does anyone else know that?",
+            "bodyPreview": "The urgent answer as soon as possible and if you don't have information, wait for a reply\r\n\r\nzaaz Eng KSA",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQANOU9YUT029PloiT0H7IlrM=",
+            "conversationIndex": "AQHcqTNj05T1hRPTb0+WiJPQfsiWsw==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAACrjVV0AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><div dir=\"rtl\" style=\"font-family:Aptos,Aptos_MSFontService,-apple-system,Roboto,Arial,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)\">The urgent answer as soon as possible and if you don't have information, wait for a reply</div><div dir=\"ltr\" style=\"font-family:Aptos,Aptos_MSFontService,-apple-system,Roboto,Arial,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)\"><br></div><div dir=\"ltr\" style=\"font-family:Aptos,Aptos_MSFontService,-apple-system,Roboto,Arial,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)\">zaaz Eng KSA</div></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Zaher Alzaher",
+                    "address": "L757@outlook.sa"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Zaher Alzaher",
+                    "address": "L757@outlook.sa"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACW6r41\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AACXJXdlAAA=",
+            "createdDateTime": "2026-01-24T09:10:53Z",
+            "lastModifiedDateTime": "2026-01-24T09:10:55Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACW6r41",
+            "categories": [],
+            "receivedDateTime": "2026-01-24T09:10:53Z",
+            "sentDateTime": "2026-01-24T09:10:49Z",
+            "hasAttachments": false,
+            "internetMessageId": "<69748c992d170_ba10e8208198@sharedworker-8594d58cd-79ldf.mail>",
+            "subject": "[GitHub] A third-party OAuth application has been added to your account",
+            "bodyPreview": "Hey Damn619!\r\n\r\nA third-party OAuth application (Microsoft-Corporation) with read:user and user:email scopes was recently authorized to access your account.\r\nVisit https://github.com/settings/connections/applications/e37ffdec11c0245cb2e0 for more informat",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAF-9SuwHrC1AkoJbAoOc8rY=",
+            "conversationIndex": "AQHcjRFXX/1K7AesLUCSglsCg5zytg==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAACXJXdlAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "text",
+                "content": "Hey Damn619!\r\n\r\nA third-party OAuth application (Microsoft-Corporation) with read:user and user:email scopes was recently authorized to access your account.\r\nVisit https://github.com/settings/connections/applications/e37ffdec11c0245cb2e0 for more information.\r\n\r\nTo see this and other security events for your account, visit https://github.com/settings/security-log\r\n\r\nIf you run into problems, please contact support by visiting https://github.com/contact\r\n\r\nThanks,\r\nThe GitHub Team\r\n\r\n"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "GitHub",
+                    "address": "noreply@github.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "GitHub",
+                    "address": "noreply@github.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACW6r4f\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AACXJXdkAAA=",
+            "createdDateTime": "2026-01-24T09:07:56Z",
+            "lastModifiedDateTime": "2026-01-24T09:08:14Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AACW6r4f",
+            "categories": [],
+            "receivedDateTime": "2026-01-24T09:07:57Z",
+            "sentDateTime": "2026-01-24T09:07:51Z",
+            "hasAttachments": false,
+            "internetMessageId": "<69748be7afc41_21ba2210e8257f8@github-highworker-2596df8.ash1-iad.github.net.mail>",
+            "subject": "🚀 Your GitHub launch code",
+            "bodyPreview": "Here's your GitHub launch code!\r\n\r\n\r\n\r\nContinue signing up for GitHub by entering the code below:\r\n\r\n86446548\r\n\r\nOpen GitHub\r\n\r\nNot able to enter the code? Paste the following link into your browser:\r\nhttps://github.com/account_verifications/confirm/e",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQANqiLegQCydMqw6tqmJ2ves=",
+            "conversationIndex": "AQHcjRDt2qIt6BALJ0yrDq2qYna96w==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAACXJXdkAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html lang=\"en\" style=\"font-family:sans-serif; box-sizing:border-box\"><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"width=device-width\"></head><body bgcolor=\"#fff\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size:14px; line-height:1.5; color:#24292e; background-color:#fff; margin:0\"><table align=\"center\" class=\"container-sm width-full\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; max-width:544px; margin-right:auto; margin-left:auto; width:100%!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td class=\"center p-3\" align=\"center\" valign=\"top\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:16px\"><center style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"width-full container-md\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; max-width:768px; margin-right:auto; margin-left:auto; width:100%!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"left\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td class=\"text-center\" align=\"center\" style=\"box-sizing:border-box; text-align:center!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><img src=\"https://github.githubassets.com/assets/octocat-logo-805b5c3e249f.png\" alt=\"GitHub\" width=\"32\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; border-style:none\"> <h2 class=\"lh-condensed mt-2 text-normal\" style=\"box-sizing:border-box; margin-top:8px!important; margin-bottom:0; font-size:24px; font-weight:400!important; line-height:1.25!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">Here's your GitHub launch code! </h2></td></tr></tbody></table><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table></td></tr></tbody></table><table width=\"100%\" class=\"width-full\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td class=\"border rounded-2 d-block\" style=\"box-sizing:border-box; border-radius:6px!important; display:block!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0; border:1px solid #e1e4e8\"><table align=\"center\" class=\"width-full text-center\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; text-align:center!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td class=\"p-3 p-sm-4\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:16px\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"width-full\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><img src=\"https://github.githubassets.com/assets/launch-rocket-50abbb915633.png\" alt=\"a rocket\" width=\"110\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; border-style:none\"> <table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><span class=\"sans-serif f4 text-center\" style=\"text-align:center!important; box-sizing:border-box; font-size:16px!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">Continue signing up for GitHub by entering the code below: </span><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><span class=\"f00-light text-gray-dark sans-serif text-semibold\" style=\"box-sizing:border-box; color:#24292e!important; font-size:40px!important; font-weight:300!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">86446548</span> <table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><a href=\"https://github.com/account_verifications?verification=eba94927-8a8c-407d-ad4c-6fad4e2eabc7&amp;via_launch_code_email=true\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-large\" style=\"background-color:#1f883d!important; box-sizing:border-box; color:#fff; text-decoration:none; display:inline-block; font-size:inherit; font-weight:500; line-height:1.5; white-space:nowrap; vertical-align:middle; border-radius:.5em; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:.75em 1.5em; border:1px solid #1f883d\">Open GitHub</a> </td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"width-full f5 text-gray-light\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; color:#6a737d!important; width:100%!important; font-size:14px!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><table class=\"width-full\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td class=\"text-left\" align=\"left\" style=\"box-sizing:border-box; text-align:left!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">Not able to enter the code? Paste the following link into your browser: <br style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><a href=\"https://github.com/account_verifications/confirm/eba94927-8a8c-407d-ad4c-6fad4e2eabc7/86446548\" class=\"wb-break-all\" style=\"background-color:rgba(0,0,0,0); box-sizing:border-box; color:#0366d6; text-decoration:none; word-break:break-all!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">https://github.com/account_verifications/confirm/eba94927-8a8c-407d-ad4c-6fad4e2eabc7/86446548</a> </td><td style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"></td></tr></tbody></table></td></tr></tbody></table><hr style=\"box-sizing:content-box; height:0; overflow:hidden; background-color:rgba(0,0,0,0); border-bottom-style:solid; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; margin:15px 0; border-width:0 0 1px\"></td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"width-full text-center\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; text-align:center!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><p class=\"f6\" style=\"box-sizing:border-box; margin-top:0; margin-bottom:10px; font-size:12px!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><a href=\"https://docs.github.com/articles/github-terms-of-service/\" class=\"d-inline-block\" style=\"background-color:rgba(0,0,0,0); box-sizing:border-box; color:#0366d6; text-decoration:none; display:inline-block!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">Terms</a> ・ <a href=\"https://docs.github.com/articles/github-privacy-policy/\" class=\"d-inline-block\" style=\"background-color:rgba(0,0,0,0); box-sizing:border-box; color:#0366d6; text-decoration:none; display:inline-block!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">Privacy</a> ・ <a href=\"https://github.com/login\" class=\"d-inline-block\" style=\"background-color:rgba(0,0,0,0); box-sizing:border-box; color:#0366d6; text-decoration:none; display:inline-block!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">Sign in to GitHub</a> </p><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><p class=\"f5 text-gray-light\" style=\"box-sizing:border-box; margin-top:0; margin-bottom:10px; color:#6a737d!important; font-size:14px!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">You’re receiving this email because you recently created a new GitHub account. If this wasn’t you, please ignore this email. </p></td></tr></tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"width-full text-center\" width=\"100%\" style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; width:100%!important; text-align:center!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td align=\"center\" style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\"><table style=\"box-sizing:border-box; border-spacing:0; border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tbody style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><tr style=\"box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\"><td height=\"16\" style=\"font-size:16px; line-height:16px; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important; padding:0\">&nbsp;</td></tr></tbody></table><p class=\"f6 text-gray-light\" style=\"box-sizing:border-box; margin-top:0; margin-bottom:10px; color:#6a737d!important; font-size:12px!important; font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;!important\">GitHub, Inc. ・88 Colin P Kelly Jr Street ・San Francisco, CA 94107</p></td></tr></tbody></table></center></td></tr></tbody></table><div style=\"display:none; white-space:nowrap; box-sizing:border-box; font:15px/0 apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "GitHub",
+                    "address": "noreply@github.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "GitHub",
+                    "address": "noreply@github.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABWeLBE\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AABWl5F1AAA=",
+            "createdDateTime": "2025-10-12T18:45:07Z",
+            "lastModifiedDateTime": "2025-10-12T18:45:31Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABWeLBE",
+            "categories": [],
+            "receivedDateTime": "2025-10-12T18:45:08Z",
+            "sentDateTime": "2025-10-12T18:45:03Z",
+            "hasAttachments": false,
+            "internetMessageId": "<1760294701-415bc99acb7085565847cdc4b238389d__zemibuza@ruru.be>",
+            "subject": "hello",
+            "bodyPreview": "hello",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAFzAoq_ofOpLqKSsOM1v3T8=",
+            "conversationIndex": "AQHcO6hUXMCir6h86kuopKw4zW/dPw==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAABWl5F1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "text",
+                "content": "hello"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "zemibuza@ruru.be",
+                    "address": "zemibuza@ruru.be"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "zemibuza@ruru.be",
+                    "address": "zemibuza@ruru.be"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABR4vW7\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AABSAL1OAAA=",
+            "createdDateTime": "2025-10-08T18:43:12Z",
+            "lastModifiedDateTime": "2025-10-08T18:48:55Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABR4vW7",
+            "categories": [],
+            "receivedDateTime": "2025-10-08T18:43:13Z",
+            "sentDateTime": "2025-10-08T18:43:06Z",
+            "hasAttachments": false,
+            "internetMessageId": "<PlannerDueDate-2306fa06-bec6-48b9-bc64-c8976361590b-13a31419-c61c-4af4-b42b-ec5425053183-r0-SendEmail-rh_cac-aid_f0ab48d7-91a0-4aa9-9351-e5ce9405c047@odspnotify>",
+            "subject": "You have late tasks",
+            "bodyPreview": "Hi Adele. You have a task due.\r\n        You have a late task\r\nUnits Delivered to Retailers\r\nIn the plan  Mark 8 Project Plan\r\n10/1/2025\r\n7 days late\r\nOpen in Browser\r\nOpen in Teams\r\nYou are receiving this email because you have subscribed to Microsoft Off",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAMIxwABWYepEkdPve72mUWU=",
+            "conversationIndex": "AQHcOINmwjHAAFZh6kSR0+97vaZRZQ==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAABSAL1OAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html dir=\"ltr\" lang=\"en-us\"><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><style type=\"text/css\">\r\n<!--\r\n.headerBackgroundMsoTable\r\n\t{border-spacing:0px;\r\n\twidth:100%}\r\n-->\r\n</style></head><body style=\"margin:0px\"><div><table height=\"100%\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px\"><tbody><tr><td valign=\"top\" align=\"center\"><table align=\"center\" style=\"border-spacing:0px; width:100%!important; margin-right:auto; margin-left:auto; margin:0 auto; max-width:640px; font-family:'Segoe UI'; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"center\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td colspan=\"1\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:32px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:20px; color:#242424\">Hi Adele. You have a task due. </span></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; border-top:1px solid #E1DFDD; border-bottom:1px solid #E1DFDD; border-top:1px solid rgba(128,128,128,0.25); border-bottom:1px solid rgba(128,128,128,0.25)\"><tbody><tr><td style=\"padding:12px 32px 4px; background-color:#FAFAFA\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:11px 0 3px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"width:35px\"><img src=\"cid:aa8a0a94-d10f-4601-830d-120d39f5351d\" alt=\"Calendar Late\" width=\"30\" height=\"30\" border=\"0\" style=\"display:block; outline:none; border:none\"> </td><td><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:14px; color:#1B1A19\">You have a <b>late</b> task </span></td></tr></tbody></table></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; background-color:white; border:1px solid #E1DFDD; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td style=\"padding:12px 24px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"padding:4px 0\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F/F7yLTs6wxEOtp4bYZdtVfGUAK_pN?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638955457847393602\" data-loopstyle=\"{'link'}\" style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:14px; line-height:20px; color:#1B1A19; text-decoration:underline\">Units Delivered to Retailers</a></td></tr><tr><td style=\"padding:4px 0\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#605E5C\">In the plan <span style=\"\"><img src=\"cid:0922cdbe-022e-4bc0-bc2f-99df2f9b1c39\" alt=\"Planner\" width=\"20\" height=\"20\" border=\"0\" style=\"display:inline-block; vertical-align:bottom; border:none\"></span> <a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638955457847393602\" data-loopstyle=\"{'link'}\" style=\"color:#1B1A19; text-decoration:underline\">Mark 8 Project Plan</a></span></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><img src=\"cid:185e0580-cb1f-4618-89e9-643563216b74\" alt=\"Calendar\" width=\"16\" height=\"16\" border=\"0\" style=\"display:block; outline:none; border:none\"></td><td style=\"padding:0 4px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#1B1A19\">10/1/2025</span></td><td style=\"padding:0 8px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-radius:12px; background-color:#FED9CC\"><tbody><tr><td style=\"padding:0 10px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#A80000\">7 days late</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style=\"padding:20px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#5B5FC7; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/MyTasks?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638955457847393602\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#ffffff; text-decoration:none\">Open in Browser </strong></a></td></tr></tbody></table></td><td style=\"padding-left:10px; padding-right:10px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#ffffff; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/mytasks?tenantId=dd172b04-e4e2-4084-885c-47c9cc57f059&amp;webUrl=https%3a%2f%2ftasks.teams.microsoft.com%2fteamsui%2fpersonalApp%2falltasklists&amp;context=%7b%22subEntityId%22%3a%22%2fv1%2fassignedtome%3fnc%3demail%26nt%3dduedate%22%7d\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#252424; text-decoration:none\">Open in Teams </strong></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"font-size:12px; line-height:16px; padding:20px 32px\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">You are receiving this email because you have subscribed to Microsoft Office 365. </td></tr><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">Notification settings: Go to <a href=\"https://tasks.office.com/\" target=\"_blank\" style=\"color:#6b6b6c; text-decoration:underline\">Planner</a>, select the gear icon, then select &quot;Notifications&quot;. </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><hr></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><img src=\"cid:d1c64c0c-83a1-4374-860d-3e07441c942c\" alt=\"\" title=\"\" height=\"22\" width=\"90\" style=\"margin:0px; height:22px; width:90px\"> </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"padding:0 4px 0 0; white-space:nowrap\"><p style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\"><a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" target=\"_blank\" title=\"\" style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">Privacy&nbsp;Statement</a> </p></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\"><p style=\"margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">This email is generated through Contoso's use of Microsoft 365 and may contain content that is controlled by Contoso.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><img src=\"https://southcentralusr-notifyp.svc.ms:443/api/v2/tracking/method/View?mi=1KeVdWS8rEKgJDCV-kSVjg&amp;si=PlannerDueDate\" aria-hidden=\"true\" role=\"presentation\" height=\"1\" width=\"1\"></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABPHqC7\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AABPOpDOAAA=",
+            "createdDateTime": "2025-10-02T18:47:28Z",
+            "lastModifiedDateTime": "2025-10-02T18:47:34Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABPHqC7",
+            "categories": [],
+            "receivedDateTime": "2025-10-02T18:47:29Z",
+            "sentDateTime": "2025-10-02T18:47:22Z",
+            "hasAttachments": false,
+            "internetMessageId": "<PlannerDueDate-be693df2-1b7b-4bbe-94c6-b8144cf02efb-64f8f3e0-1005-445d-a360-24593634c348-r0-SendEmail-rh_cac-aid_4106ad16-2abd-44de-ba9a-e8206dcac850@odspnotify>",
+            "subject": "You have late tasks",
+            "bodyPreview": "Hi Adele. You have a task due.\r\n        You have a late task\r\nUnits Delivered to Retailers\r\nIn the plan  Mark 8 Project Plan\r\n10/1/2025\r\n1 day late\r\nOpen in Browser\r\nOpen in Teams\r\nYou are receiving this email because you have subscribed to Microsoft Offi",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAM_jHmHmfqVDvXBteIS2MQ4=",
+            "conversationIndex": "AQHcM80Az6MeYeZ+pUO9cG14hLYxDg==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAABPOpDOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html dir=\"ltr\" lang=\"en-us\"><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><style type=\"text/css\">\r\n<!--\r\n.headerBackgroundMsoTable\r\n\t{border-spacing:0px;\r\n\twidth:100%}\r\n-->\r\n</style></head><body style=\"margin:0px\"><div><table height=\"100%\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px\"><tbody><tr><td valign=\"top\" align=\"center\"><table align=\"center\" style=\"border-spacing:0px; width:100%!important; margin-right:auto; margin-left:auto; margin:0 auto; max-width:640px; font-family:'Segoe UI'; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"center\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td colspan=\"1\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:32px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:20px; color:#242424\">Hi Adele. You have a task due. </span></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; border-top:1px solid #E1DFDD; border-bottom:1px solid #E1DFDD; border-top:1px solid rgba(128,128,128,0.25); border-bottom:1px solid rgba(128,128,128,0.25)\"><tbody><tr><td style=\"padding:12px 32px 4px; background-color:#FAFAFA\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:11px 0 3px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"width:35px\"><img src=\"cid:fc440b84-3727-432c-b96e-87cdc48a8ad1\" alt=\"Calendar Late\" width=\"30\" height=\"30\" border=\"0\" style=\"display:block; outline:none; border:none\"> </td><td><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:14px; color:#1B1A19\">You have a <b>late</b> task </span></td></tr></tbody></table></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; background-color:white; border:1px solid #E1DFDD; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td style=\"padding:12px 24px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"padding:4px 0\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F/F7yLTs6wxEOtp4bYZdtVfGUAK_pN?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638950276413211175\" data-loopstyle=\"{'link'}\" style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:14px; line-height:20px; color:#1B1A19; text-decoration:underline\">Units Delivered to Retailers</a></td></tr><tr><td style=\"padding:4px 0\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#605E5C\">In the plan <span style=\"\"><img src=\"cid:af0960b9-57db-4879-9ed6-b724631dd4d7\" alt=\"Planner\" width=\"20\" height=\"20\" border=\"0\" style=\"display:inline-block; vertical-align:bottom; border:none\"></span> <a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638950276413211175\" data-loopstyle=\"{'link'}\" style=\"color:#1B1A19; text-decoration:underline\">Mark 8 Project Plan</a></span></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><img src=\"cid:4c4ec701-03ef-4fe0-b559-005551b56107\" alt=\"Calendar\" width=\"16\" height=\"16\" border=\"0\" style=\"display:block; outline:none; border:none\"></td><td style=\"padding:0 4px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#1B1A19\">10/1/2025</span></td><td style=\"padding:0 8px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-radius:12px; background-color:#FED9CC\"><tbody><tr><td style=\"padding:0 10px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#A80000\">1 day late</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style=\"padding:20px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#5B5FC7; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/MyTasks?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638950276413211175\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#ffffff; text-decoration:none\">Open in Browser </strong></a></td></tr></tbody></table></td><td style=\"padding-left:10px; padding-right:10px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#ffffff; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/mytasks?tenantId=dd172b04-e4e2-4084-885c-47c9cc57f059&amp;webUrl=https%3a%2f%2ftasks.teams.microsoft.com%2fteamsui%2fpersonalApp%2falltasklists&amp;context=%7b%22subEntityId%22%3a%22%2fv1%2fassignedtome%3fnc%3demail%26nt%3dduedate%22%7d\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#252424; text-decoration:none\">Open in Teams </strong></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"font-size:12px; line-height:16px; padding:20px 32px\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">You are receiving this email because you have subscribed to Microsoft Office 365. </td></tr><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">Notification settings: Go to <a href=\"https://tasks.office.com/\" target=\"_blank\" style=\"color:#6b6b6c; text-decoration:underline\">Planner</a>, select the gear icon, then select &quot;Notifications&quot;. </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><hr></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><img src=\"cid:9676b9e0-e92c-4ea5-90c1-653b051e5008\" alt=\"\" title=\"\" height=\"22\" width=\"90\" style=\"margin:0px; height:22px; width:90px\"> </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"padding:0 4px 0 0; white-space:nowrap\"><p style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\"><a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" target=\"_blank\" title=\"\" style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">Privacy&nbsp;Statement</a> </p></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\"><p style=\"margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">This email is generated through Contoso's use of Microsoft 365 and may contain content that is controlled by Contoso.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><img src=\"https://southcentralusr-notifyp.svc.ms:443/api/v2/tracking/method/View?mi=kl7M37yQj0KKYB5SeVvDsA&amp;si=PlannerDueDate\" aria-hidden=\"true\" role=\"presentation\" height=\"1\" width=\"1\"></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABPHnXD\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AABPOpDNAAA=",
+            "createdDateTime": "2025-10-01T15:01:06Z",
+            "lastModifiedDateTime": "2025-10-01T15:01:10Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABPHnXD",
+            "categories": [],
+            "receivedDateTime": "2025-10-01T15:01:07Z",
+            "sentDateTime": "2025-10-01T15:00:53Z",
+            "hasAttachments": false,
+            "internetMessageId": "<PlannerDueDate-b47fba87-6fdc-4831-93c4-ce5f7e7b0a40-56ef145a-dddf-4a81-a0b2-5819d20ca6c8-r0-SendEmail-rh_cac-aid_917d2a03-7054-4287-9f0d-a9651dad209d@odspnotify>",
+            "subject": "You have tasks due today",
+            "bodyPreview": "Hi Adele. You have a task due.\r\n        You have a task due today\r\nUnits Delivered to Retailers\r\nIn the plan  Mark 8 Project Plan\r\n10/1/2025\r\nOpen in Browser\r\nOpen in Teams\r\nYou are receiving this email because you have subscribed to Microsoft Office 365.",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQAATvrmn4_nNPmombZZ1FFmA=",
+            "conversationIndex": "AQHcMuQ2BO+uafj6c0+aiZtlnUUWYA==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAABPOpDNAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html dir=\"ltr\" lang=\"en-us\"><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><style type=\"text/css\">\r\n<!--\r\n.headerBackgroundMsoTable\r\n\t{border-spacing:0px;\r\n\twidth:100%}\r\n-->\r\n</style></head><body style=\"margin:0px\"><div><table height=\"100%\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px\"><tbody><tr><td valign=\"top\" align=\"center\"><table align=\"center\" style=\"border-spacing:0px; width:100%!important; margin-right:auto; margin-left:auto; margin:0 auto; max-width:640px; font-family:'Segoe UI'; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"center\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td colspan=\"1\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:32px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:20px; color:#242424\">Hi Adele. You have a task due. </span></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; border-top:1px solid #E1DFDD; border-bottom:1px solid #E1DFDD; border-top:1px solid rgba(128,128,128,0.25); border-bottom:1px solid rgba(128,128,128,0.25)\"><tbody><tr><td style=\"padding:12px 32px 4px; background-color:#FAFAFA\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:11px 0 3px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"width:35px\"><img src=\"cid:61b87e57-4dab-453b-b409-b6095617d841\" alt=\"Calendar Late\" width=\"30\" height=\"30\" border=\"0\" style=\"display:block; outline:none; border:none\"> </td><td><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:14px; color:#1B1A19\">You have a task <b>due today</b> </span></td></tr></tbody></table></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; background-color:white; border:1px solid #E1DFDD; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td style=\"padding:12px 24px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"padding:4px 0\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F/F7yLTs6wxEOtp4bYZdtVfGUAK_pN?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638949276517803913\" data-loopstyle=\"{'link'}\" style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:14px; line-height:20px; color:#1B1A19; text-decoration:underline\">Units Delivered to Retailers</a></td></tr><tr><td style=\"padding:4px 0\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#605E5C\">In the plan <span style=\"\"><img src=\"cid:49f42477-2dcb-41a0-93b4-ba6afb74b29b\" alt=\"Planner\" width=\"20\" height=\"20\" border=\"0\" style=\"display:inline-block; vertical-align:bottom; border:none\"></span> <a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638949276517803913\" data-loopstyle=\"{'link'}\" style=\"color:#1B1A19; text-decoration:underline\">Mark 8 Project Plan</a></span></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><img src=\"cid:1bb3496e-47a6-4db2-b057-cd825e478319\" alt=\"Calendar\" width=\"16\" height=\"16\" border=\"0\" style=\"display:block; outline:none; border:none\"></td><td style=\"padding:0 4px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#1B1A19\">10/1/2025</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style=\"padding:20px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#5B5FC7; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/MyTasks?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638949276517803913\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#ffffff; text-decoration:none\">Open in Browser </strong></a></td></tr></tbody></table></td><td style=\"padding-left:10px; padding-right:10px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#ffffff; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/mytasks?tenantId=dd172b04-e4e2-4084-885c-47c9cc57f059&amp;webUrl=https%3a%2f%2ftasks.teams.microsoft.com%2fteamsui%2fpersonalApp%2falltasklists&amp;context=%7b%22subEntityId%22%3a%22%2fv1%2fassignedtome%3fnc%3demail%26nt%3dduedate%22%7d\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#252424; text-decoration:none\">Open in Teams </strong></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"font-size:12px; line-height:16px; padding:20px 32px\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">You are receiving this email because you have subscribed to Microsoft Office 365. </td></tr><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">Notification settings: Go to <a href=\"https://tasks.office.com/\" target=\"_blank\" style=\"color:#6b6b6c; text-decoration:underline\">Planner</a>, select the gear icon, then select &quot;Notifications&quot;. </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><hr></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><img src=\"cid:4c05c2f4-92ae-4866-aaad-005e7786fa86\" alt=\"\" title=\"\" height=\"22\" width=\"90\" style=\"margin:0px; height:22px; width:90px\"> </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"padding:0 4px 0 0; white-space:nowrap\"><p style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\"><a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" target=\"_blank\" title=\"\" style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">Privacy&nbsp;Statement</a> </p></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\"><p style=\"margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">This email is generated through Contoso's use of Microsoft 365 and may contain content that is controlled by Contoso.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><img src=\"https://southcentralusr-notifyp.svc.ms:443/api/v2/tracking/method/View?mi=USFW9Fb_8ECfV30_o_WRww&amp;si=PlannerDueDate\" aria-hidden=\"true\" role=\"presentation\" height=\"1\" width=\"1\"></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        },
+        {
+            "@odata.etag": "W/\"CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABNdOny\"",
+            "id": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAADUwywT0x3WRJXfefGC8Xz-AABNkFueAAA=",
+            "createdDateTime": "2025-09-30T15:04:19Z",
+            "lastModifiedDateTime": "2025-09-30T15:05:38Z",
+            "changeKey": "CQAAABYAAADUwywT0x3WRJXfefGC8Xz/AABNdOny",
+            "categories": [],
+            "receivedDateTime": "2025-09-30T15:04:19Z",
+            "sentDateTime": "2025-09-30T15:04:12Z",
+            "hasAttachments": false,
+            "internetMessageId": "<PlannerDueDate-99ee9b28-1a5a-4f18-8d44-34a2002651eb-8d650b8b-f276-4a2d-a226-0c22743c8b52-r0-SendEmail-rh_cac-aid_a34e9a5a-9fa8-4720-9b2b-740b53fd29b4@odspnotify>",
+            "subject": "You have upcoming tasks due",
+            "bodyPreview": "Hi Adele. You have a task due.\r\n        You have an upcoming task\r\nUnits Delivered to Retailers\r\nIn the plan  Mark 8 Project Plan\r\n10/1/2025\r\nDue in 1 day\r\nOpen in Browser\r\nOpen in Teams\r\nYou are receiving this email because you have subscribed to Microso",
+            "importance": "normal",
+            "parentFolderId": "AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAuAAAAAADfsy0XtCMZS5XonZkyBLu6AQDUwywT0x3WRJXfefGC8Xz-AAAAAAEMAAA=",
+            "conversationId": "AAQkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMAAQALOF1ZIlzmBGnA7bskXsT8M=",
+            "conversationIndex": "AQHcMht+s4XVkiXOYEacDtuyRexPww==",
+            "isDeliveryReceiptRequested": null,
+            "isReadReceiptRequested": false,
+            "isRead": false,
+            "isDraft": false,
+            "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADY1YmE3N2FhLWEwMzQtNDNkMC04Mzg3LTczMTdiMjk2NzRhMABGAAAAAADfsy0XtCMZS5XonZkyBLu6BwDUwywT0x3WRJXfefGC8Xz%2FAAAAAAEMAADUwywT0x3WRJXfefGC8Xz%2FAABNkFueAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+            "inferenceClassification": "focused",
+            "body": {
+                "contentType": "html",
+                "content": "<html dir=\"ltr\" lang=\"en-us\"><head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><style type=\"text/css\">\r\n<!--\r\n.headerBackgroundMsoTable\r\n\t{border-spacing:0px;\r\n\twidth:100%}\r\n-->\r\n</style></head><body style=\"margin:0px\"><div><table height=\"100%\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px\"><tbody><tr><td valign=\"top\" align=\"center\"><table align=\"center\" style=\"border-spacing:0px; width:100%!important; margin-right:auto; margin-left:auto; margin:0 auto; max-width:640px; font-family:'Segoe UI'; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"center\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td colspan=\"1\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:32px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:20px; color:#242424\">Hi Adele. You have a task due. </span></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; border-top:1px solid #E1DFDD; border-bottom:1px solid #E1DFDD; border-top:1px solid rgba(128,128,128,0.25); border-bottom:1px solid rgba(128,128,128,0.25)\"><tbody><tr><td style=\"padding:12px 32px 4px; background-color:#FAFAFA\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"padding:11px 0 3px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%\"><tbody><tr><td style=\"width:35px\"><img src=\"cid:4173af2b-4af5-4e07-aa81-e7d35c060aeb\" alt=\"Calendar Late\" width=\"30\" height=\"30\" border=\"0\" style=\"display:block; outline:none; border:none\"> </td><td><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:14px; color:#1B1A19\">You have an <b>upcoming</b> task </span></td></tr></tbody></table></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:100%; background-color:white; border:1px solid #E1DFDD; border:1px solid rgba(128,128,128,0.25); border-radius:4px\"><tbody><tr><td style=\"padding:12px 24px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"padding:4px 0\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F/F7yLTs6wxEOtp4bYZdtVfGUAK_pN?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638948412515754008\" data-loopstyle=\"{'link'}\" style=\"font-family:'Segoe UI',sans-serif; font-weight:600; font-size:14px; line-height:20px; color:#1B1A19; text-decoration:underline\">Units Delivered to Retailers</a></td></tr><tr><td style=\"padding:4px 0\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#605E5C\">In the plan <span style=\"\"><img src=\"cid:b6a65c87-e66c-40aa-aebb-24c326cd5c49\" alt=\"Planner\" width=\"20\" height=\"20\" border=\"0\" style=\"display:inline-block; vertical-align:bottom; border:none\"></span> <a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/PlanViews/8ldfz0NZQkOvmhCUZrycDGUAF4-F?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638948412515754008\" data-loopstyle=\"{'link'}\" style=\"color:#1B1A19; text-decoration:underline\">Mark 8 Project Plan</a></span></td></tr><tr><td style=\"padding:4px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><img src=\"cid:9e3231de-cf77-49bb-86da-24ff11b56a60\" alt=\"Calendar\" width=\"16\" height=\"16\" border=\"0\" style=\"display:block; outline:none; border:none\"></td><td style=\"padding:0 4px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#1B1A19\">10/1/2025</span></td><td style=\"padding:0 8px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-radius:12px; background-color:#EDEBE9\"><tbody><tr><td style=\"padding:0 10px\"><span style=\"font-family:'Segoe UI',sans-serif; font-weight:400; font-size:12px; line-height:20px; color:#323130\">Due in 1 day</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style=\"padding:20px 0\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#5B5FC7; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://planner.cloud.microsoft/M365x63639251.onmicrosoft.com/en-US/Home/MyTasks?Type=DueDate&amp;Channel=OdspNotify&amp;CreatedTime=638948412515754008\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#ffffff; text-decoration:none\">Open in Browser </strong></a></td></tr></tbody></table></td><td style=\"padding-left:10px; padding-right:10px\"><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td align=\"center\" style=\"padding:6px 20px 6px 20px; border:1px solid #E1DFDD; border-radius:4px; background-color:#ffffff; box-shadow:0px 0px 4px rgba(0,0,0,0.09)\"><a href=\"https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/mytasks?tenantId=dd172b04-e4e2-4084-885c-47c9cc57f059&amp;webUrl=https%3a%2f%2ftasks.teams.microsoft.com%2fteamsui%2fpersonalApp%2falltasklists&amp;context=%7b%22subEntityId%22%3a%22%2fv1%2fassignedtome%3fnc%3demail%26nt%3dduedate%22%7d\" target=\"_blank\"><strong style=\"display:inline-block; font-weight:600; font-size:14px; font-family:&quot;Segoe UI&quot;,sans-serif; line-height:20px; color:#252424; text-decoration:none\">Open in Teams </strong></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px; margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"font-size:12px; line-height:16px; padding:20px 32px\"><div><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td><table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">You are receiving this email because you have subscribed to Microsoft Office 365. </td></tr><tr><td style=\"font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:10px; line-height:20px; color:#6b6b6b; padding:6px 0; letter-spacing:-0.01em\">Notification settings: Go to <a href=\"https://tasks.office.com/\" target=\"_blank\" style=\"color:#6b6b6c; text-decoration:underline\">Planner</a>, select the gear icon, then select &quot;Notifications&quot;. </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><hr></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><img src=\"cid:50877ca9-72a2-4ecc-8164-ab9094816fe2\" alt=\"\" title=\"\" height=\"22\" width=\"90\" style=\"margin:0px; height:22px; width:90px\"> </td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\" style=\"padding:0 4px 0 0; white-space:nowrap\"><p style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\"><a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" target=\"_blank\" title=\"\" style=\"padding:0px; margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">Privacy&nbsp;Statement</a> </p></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding-top:12px; text-align:left; padding-bottom:12px\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing:0px; width:100%\"><tbody><tr><td align=\"left\"><p style=\"margin:0px; font-family:'Segoe UI',SUWR,Verdana,sans-serif; font-size:12px; line-height:20px; color:#6b6b6c; letter-spacing:-0.01em\">This email is generated through Contoso's use of Microsoft 365 and may contain content that is controlled by Contoso.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><img src=\"https://southcentralusr-notifyp.svc.ms:443/api/v2/tracking/method/View?mi=5JeFEbAt4EKczEca9SnRLA&amp;si=PlannerDueDate\" aria-hidden=\"true\" role=\"presentation\" height=\"1\" width=\"1\"></body></html>"
+            },
+            "sender": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "from": {
+                "emailAddress": {
+                    "name": "Microsoft on behalf of your organization",
+                    "address": "noreply@planner.office365.com"
+                }
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "name": "Adele Vance",
+                        "address": "AdeleV@M365x63639251.OnMicrosoft.com"
+                    }
+                }
+            ],
+            "ccRecipients": [],
+            "bccRecipients": [],
+            "replyTo": [],
+            "flag": {
+                "flagStatus": "notFlagged"
+            }
+        }
+    ],
+    "@odata.nextLink": "https://graph.microsoft.com/v1.0/me/messages?%24top=10&%24skip=10"
+}

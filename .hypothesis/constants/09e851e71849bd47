@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/graph/todo.py
+# hypothesis_version: 6.151.14
+
+['/me/todo/lists', 'add_linked_resource', 'applicationName', 'complete_task', 'completed', 'create_task', 'create_task_list', 'displayName', 'ensure_lists', 'externalId', 'list_task_lists', 'notStarted', 'reopen_task', 'status', 'update_task', 'webUrl']

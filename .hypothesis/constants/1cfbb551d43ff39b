@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/ingestion/delta_sync.py
+# hypothesis_version: 6.151.14
+
+['@odata.deltaLink', 'body_preview', 'body_text', 'delta', 'delta_run', 'graph_message_id', 'inbox', 'is_deleted', 'removed', 'sentitems', 'upserted', 'value']

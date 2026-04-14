@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/ingestion/snapshot_builder.py
+# hypothesis_version: 6.151.14
+
+['(?<=[.!?])\\s+', '?', 'address', 'confidence', 'created_at', 'extracted_bulk_flag', 'extracted_due_at', 'id', 'message_id', 'model_version', 'primary_bucket', 'reason_short', 'rule_version', 'should_create_task']

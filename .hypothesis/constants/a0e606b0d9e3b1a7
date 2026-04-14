@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/app.py
+# hypothesis_version: 6.151.14
+
+['/healthz', '0.1.0', 'app.shutdown', 'app.startup', 'email_intel', 'graph', 'graph_auth_ready', 'graph_close_failed', 'iso', 'ok', 'reducer_version', 'status']

@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/classify/rules_override.py
+# hypothesis_version: 6.151.14
+
+[0.7, 0.8, 0.9, 0.95, '.', '; ', '@', 'C-domain-block', 'C-noreply-forces-fyi', 'C-vip-allow', 'OverrideConfig', '[]', '\\?\\s*$', 'apply_final_override', 'blocked_domains.json', 'config', 'list-unsubscribe', 'load_override_config', 'no-rules-fired', 'override.fired', 'reason_short', 'utf-8', 'vip_senders.json']

@@ -1,0 +1,4 @@
+# file: /mnt/w/Products/email-intelligence/src/email_intel/graph/client.py
+# hypothesis_version: 6.151.14
+
+[0.0, 0.25, 1.0, 30.0, 60.0, 204, 400, 401, 404, 412, 429, 500, 502, 503, 504, 599, 1000, '/', '@odata.deltaLink', '@odata.nextLink', 'Accept', 'Authorization', 'DELETE', 'EtagMismatch', 'GET', 'GraphClient', 'GraphHTTPError', 'PATCH', 'POST', 'Retry-After', 'application/json', 'base_url', 'client-request-id', 'graph.request', 'http2', 'http://', 'https://', 'precondition failed', 'timeout', 'transport', 'value']
